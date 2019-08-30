@@ -377,7 +377,9 @@ input[type="radio"].visually-hidden {
 .contacts-information {
   display: flex;
 
-  justify-content: space-between;
+  flex-direction: column;
+
+  justify-content: flex-start;
   align-items: center;
 
   width: 80%;
@@ -393,6 +395,8 @@ input[type="radio"].visually-hidden {
 
   padding: 0;
   margin: 0;
+
+  margin-bottom: 15px;
 
   font-weight: 700;
 
