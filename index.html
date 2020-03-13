@@ -16,14 +16,29 @@
   </head>
   <body>
     <header class="page-header">
-      
+      <nav class="page-header__navigation navigation">
+        <ul class="page-header__list navigation__list navigation__list--menu">
+          <li class="page-header__item navigation__item"><a class="page-header__link navigation__link button" href="#skills">Навыки</a></li>
+          <li class="page-header__item navigation__item"><a class="page-header__link navigation__link button" href="#static">Статическая вёрстка</a></li>
+          <li class="page-header__item navigation__item"><a class="page-header__link navigation__link button" href="#adaptive">Адаптивная вёрстка</a></li>
+          <li class="page-header__item navigation__item"><a class="page-header__link navigation__link button" href="#php">PHP проект</a></li>
+        </ul>
+        
+        <ul class="page-header__list navigation__list navigation__list--language">
+          <li class="page-header__item navigation__item--language"><a class="page-header__link navigation__link--language button" href="#ru"><span class="visually-hidden">Русский</span></a></li>
+          <li class="page-header__item navigation__item--language"><a class="page-header__link navigation__link--language button" href="#pl"><span class="visually-hidden">Польский</span></a></li>
+        </ul>
+      </nav>
     </header>
     <main class="page-main">
-    <iframe src="/Gllacy/index.html" width="500" height="700"></iframe>
+      <iframe src="/Gllacy/index.html" width="500" height="700"></iframe>
     </main>
 
-    <footer>
+    <footer class="page-footer">
     
     </footer>
+    
+    <script defer src="js/jquery-3.4.1.min.js"></script>
+    <script defer src="js/cookie.min.js"></script>
   </body>
 </html>
