@@ -47,10 +47,10 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/ru.png");
 }
 
-.navigation__item--language:nth-last-of-type(1) a {
+.navigation__item--language:nth-last-of-type(2) a {
   background-image: url("../img/en.png");
 }
 
-.navigation__item--language:nth-last-of-type(1) a {
+.navigation__item--language:nth-last-of-type(3) a {
   background-image: url("../img/pl.png");
 }
