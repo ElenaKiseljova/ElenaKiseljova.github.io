@@ -4,13 +4,13 @@ $(document).ready(function () {
     
     $(".static__iframe").eq(index).addClass("active");
     
-    $(".popup").fadeOut();
+    $(".popup").fadeIn();
     
     console.log(111);
   });
   
   $(".popup__close").click(function () {
-    $(".popup").fadeIn();
+    $(".popup").fadeOut();
     
     $(".static__iframe").removeClass("active");
     
