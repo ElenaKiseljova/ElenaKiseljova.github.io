@@ -96,7 +96,7 @@ input[type="radio"].visually-hidden {
 .contaiter {
   position: relative;
 
-  width: 1200px; /* 768 */
+  width: 1200px;
 
   padding: 0;
   margin: 0;
@@ -104,6 +104,16 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 
   box-shadow: 0 2px 6px 0 #e1e1e1;
+}
+
+@media (max-width: 1199px) {
+  body {
+    min-width: 768px;
+  }
+  
+  .contaiter {
+    width: 768px;
+  }
 }
 
 .main-header-site-navigation {
