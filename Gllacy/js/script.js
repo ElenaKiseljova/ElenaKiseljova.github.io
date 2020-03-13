@@ -101,18 +101,20 @@ var feedback_modal_form = document.querySelector(".modal-feedback-form"),
     feedback_user_letter = document.getElementById("user-letter");
 
 
-feedback_modal_form.addEventListener("submit", function(evt) {
-  if (!feedback_user_name.value || !feedback_user_email.value || !feedback_user_letter.value) {
-    evt.preventDefault();
-
-    console.log("error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("feedback_user_name", feedback_user_name.value);
-      localStorage.setItem("feedback_user_email", feedback_user_email.value);
+if (window.location.href.indexOf("index") > -1) {
+  feedback_modal_form.addEventListener("submit", function(evt) {
+    if (!feedback_user_name.value || !feedback_user_email.value || !feedback_user_letter.value) {
+      evt.preventDefault();
+  
+      console.log("error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("feedback_user_name", feedback_user_name.value);
+        localStorage.setItem("feedback_user_email", feedback_user_email.value);
+      }
     }
-  }
-});
+  });
+}
 
 
 // OPEN/CLOSE modal window
