@@ -333,12 +333,64 @@
           </li>
         </ul>
       </section>
-      <iframe src="/Gllacy/index.html" width="500" height="700"></iframe>
+      
+      <section class="static" id="static">
+        <h2 class="static__title title">Статическая вёрстка</h2>
+        
+        <p class="static__text">
+          Учебные статические многостраничные сайты выполнены по макетам от <a href="https://htmlacademy.ru/">HTMLAcademy</a>.
+        </p>
+        <p class="static__text">
+          Работает не весь функционал сайта, а только формы обратной связи, всплывающие окошки регистрации и некоторые пункты в меню (в основном "Каталог" и "Главная").
+        </p>
+        <p class="static__text">
+          В проектах проводится валидация введенных данных в формах.
+        </p>
+        <p class="static__text">
+          В проекте Gllacy подключена карта Google через API.
+        </p>
+        
+        <ul class="static__list">
+          <li class="static__item">
+            <button type="button" name="popup">Gllacy</button>
+          </li>
+          <li class="static__item">
+            <button type="button" name="popup">Barbershop</button>
+          </li>
+          <li class="static__item">
+            <button type="button" name="popup">Device</button>
+          </li>
+          <li class="static__item">
+            <button type="button" name="popup">Nёrds</button>
+          </li>
+          <li class="static__item">
+            <button type="button" name="popup">Sedona</button>
+          </li>
+          <li class="static__item">
+            <button type="button" name="popup">Technomart</button>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="popup">
+        <h2 class="visually-hidden">Всплывающее окошко с примерами работ</h2>
+        
+        <div class="popup__list">
+          <iframe class="static__iframe" src="/Gllacy/index.html"></iframe>
+          <iframe class="static__iframe" src="/Barbershop/index.html"></iframe>
+          <iframe class="static__iframe" src="/Device/index.html"></iframe>
+          <iframe class="static__iframe" src="/Nerds/index.html"></iframe>
+          <iframe class="static__iframe" src="/Sedona/index.html"></iframe>
+          <iframe class="static__iframe" src="/Technomart/index.html"></iframe>
+        </div>
+      </section>      
     </main>
 
     <footer class="page-footer">
     
     </footer>
+    
+    <div class="popup-overlay"></div>
     
     <script defer src="js/jquery-3.4.1.min.js"></script>
     <script defer src="js/cookie.min.js"></script>
