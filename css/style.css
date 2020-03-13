@@ -43,10 +43,16 @@ input[type="radio"].visually-hidden {
   border: none;
   
   cursor: pointer;
+  
+  outline: none;
 }
 
-.button:hover {
+.button:hover,
+.button:focus,
+.button:active {
   text-decoration: none;
+  
+  outline: none;
 }
 
 /* navigation */
