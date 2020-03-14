@@ -1,11 +1,15 @@
 $(document).ready(function () {
   // открытие модального окна с iframe
   
-  $(".static__button").click(function () {
+  $(".static__button, .adaptive__button").click(function () {
     var index = $(this).parent().index();
     
-    $(".static__iframe").eq(index).addClass("active");
-    
+    if ($(this).hasClass("static__button")) {
+      $(".static__iframe").eq(index).addClass("active");
+    } else {
+      $(".adaptive__iframe").eq(index).addClass("active");
+    } 
+        
     $(".popup").fadeIn();  
     $(".popup-overlay").fadeIn(); 
     $("html").css("overflow-y", "hidden");
@@ -18,13 +22,17 @@ $(document).ready(function () {
     $(".popup-overlay").fadeOut();
     $("html").css("overflow-y", "auto");
     
-    $(".static__iframe").removeClass("active");    
+    if ($(".static__iframe").hasClass("active")) {
+      $(".static__iframe").removeClass("active"); 
+    } else {
+      $(".adaptive__iframe").removeClass("active");
+    }   
   });
   
   // закрытие модального окна с iframe (esc)
     
   $(window).keypress(function (e) { 
-      if ($(".static__iframe").hasClass("active")) {
+      if ($(".static__iframe").hasClass("active") || $(".adaptive__iframe").hasClass("active")) {
         if (e.keyCode == 27) {
           e.preventDefault();
           
@@ -32,7 +40,11 @@ $(document).ready(function () {
           $(".popup-overlay").fadeOut();
           $("html").css("overflow-y", "auto");
           
-          $(".static__iframe").removeClass("active");      
+          if ($(".static__iframe").hasClass("active")) {
+            $(".static__iframe").removeClass("active"); 
+          } else {
+            $(".adaptive__iframe").removeClass("active");
+          }         
         }
       }      
     });
