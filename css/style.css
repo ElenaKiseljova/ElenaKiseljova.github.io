@@ -119,13 +119,6 @@ input[type="radio"].visually-hidden {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.popup__list {
-  width: 100%;;
-  
-  padding: 0;
-  margin: 0;
-}
-
 .popup__close {
   position: absolute;
   
@@ -136,6 +129,14 @@ input[type="radio"].visually-hidden {
   height: 20px;
   
   background-color: red;
+}
+
+.popup__list {
+  width: 100%;
+  height: 100%;
+  
+  padding: 0;
+  margin: 0;
 }
 
 .static__iframe,
