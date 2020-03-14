@@ -337,42 +337,119 @@
       <section class="static" id="static">
         <h2 class="static__title title">Статическая вёрстка</h2>
         
-        <p class="static__text">
-          Учебные статические многостраничные сайты выполнены по макетам от <a href="https://htmlacademy.ru/">HTMLAcademy</a>.
-        </p>
-        <p class="static__text">
-          Работает не весь функционал сайта, а только формы обратной связи, всплывающие окошки регистрации и некоторые пункты в меню (в основном "Каталог" и "Главная").
-        </p>
-        <p class="static__text">
-          В проектах проводится валидация введенных данных в формах.
-        </p>
-        <p class="static__text">
-          В проекте Gllacy подключена карта Google через API.
-        </p>
-        <p class="static__text">
-          Проекты Sedona и Gllacy частично адаптивны. Ширина контейнера на ширине экрана менее 1200px меняется на 768px или 900px соответственно. 
-        </p>
-        
-        <ul class="static__list">
+        <ul class="static__list static__list--text">
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Gllacy</button>
+            Учебные статические многостраничные сайты выполнены по макетам от <a href="https://htmlacademy.ru/">HTMLAcademy</a>.
           </li>
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Barbershop</button>
+            Работает не весь функционал сайта, а только формы обратной связи, всплывающие окошки регистрации и некоторые пункты в меню (в основном "Каталог" и "Главная").
           </li>
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Device</button>
+            В проектах проводится валидация введенных данных в формах.
           </li>
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Nёrds</button>
+            В проекте Gllacy подключена карта Google через API.
           </li>
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Sedona</button>
+            Проекты Sedona и Gllacy частично адаптивны. Ширина контейнера на ширине экрана менее 1200px меняется на 768px или 900px соответственно. 
           </li>
           <li class="static__item">
-            <button class="static__button button" type="button" name="popup">Technomart</button>
+            Для построения сеток использованы flex. Для исправления браузерных умолчаний во всех проектах подключен файл normalize.css.
           </li>
         </ul>
+        
+        <ul class="static__list static__list--projects">
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Gllacy</button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Barbershop</button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Device</button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Nёrds</button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Sedona</button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup">Technomart</button>
+          </li>
+        </ul>
+      </section>      
+      
+      <section class="adaptive" id="adaptive">
+        <h2 class="adaptive__title title">Адаптивная вёрстка</h2>
+        
+        <ul class="adaptive__list adaptive__list--text">
+          <li class="adaptive__item">
+            Данные проекты комерческие и выполнены на заказ работодателя. 
+          </li>
+          <li class="adaptive__item">
+            Основная часть - <b>одностраничные сайты</b>.  
+          </li>
+          <li class="adaptive__item">
+            Исключение - FamilyMall. Данный проект был своеобразной пробой пера, поэтому он не идеален, но в процессе дальнейшей работы на компанию-заказчика я его совершенствую и дополняю новым функционалом. Здесь его представляю, как пример <b>многостраничного сайта</b> моего производства.
+          </li>
+          <li class="adaptive__item">
+            Все представленные сайты адаптированы под мобильные, планшетные и десктопные разрешения дисплеев.
+          </li>
+          <li class="adaptive__item">
+            В первых трёх (см. Lenses, Car Toy и Medallions) представленных сайтах вёрстка выполнена по методологии БЭМ.
+          </li>
+          <li class="adaptive__item">
+            Остальные свёрстаны мной до внедрения принципов БЭМ в мою работу. Но в них есть примеры моего умения работать, к примеру с <b>GIF-изображениями</b> (см. LED - в дальнейщих проектах GIF-анимация заменена видео). 
+          </li>
+          <li class="adaptive__item">
+            На сайтах, где имеется множество SVG-элементов - применяю SVG-спрайты (см. Car Toy и Medallions).
+          </li>
+          <li class="adaptive__item">
+            Все изображения заданы тегом <code><picture></code>, в котором подключаются <b>WebP</b> изображения, если поддерживаются браузером. Так же учитывается ширина вьюпорта и в зависимости от этого подставляется то, либо иное изображение (см. Mango).
+          </li>      
+          <li class="adaptive__item">
+            Весь JS-код во всех проектах так же написан мной. Постепенно преумножаю свои знания во <b>front-end</b> .
+          </li>  
+          <li class="adaptive__item">
+            Исходники проектов находятся в корне каждого проекта в папке <b>source</b>.
+          </li>            
+        </ul>
+        
+        <ul class="adaptive__list adaptive__list--projects">
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">Medallions</button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">Car Toy</button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">Lenses</button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">FamilyMall</button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">LED</button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup">Mango</button>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="php" id="php">
+        <h2 class="php__title">PHP проект</h2>
+        
+        <p class="php__text">
+          На даный момент работаю над учебным проектом от <a href="https://htmlacademy.ru/">HTMLAcademy</a> <b><a href="https://github.com/ElenaKiseljova/ElenaKiseljova.github.io/tree/master/Yetycave">Yetycave</a></b>.
+        </p>
+        <p class="php__text">
+          Изучаю, как осуществляется на стороне сервера: валидация форм, работа с файлами, работа с данными пользователя, авторицация и аутентификация, защита передаваемых данных.
+        </p>
+        <p class="php__text">
+          Так же делаю первые шаги в изучении и работе с <b>SQL</b>.
+        </p>
       </section>
       
       <section class="popup">
@@ -387,12 +464,21 @@
           <iframe class="static__iframe" src="/Technomart/index.html"></iframe>
         </div>
         
+        <div class="popup__list">
+          <iframe class="adaptive__iframe" src="/Car/index.html"></iframe>
+          <iframe class="adaptive__iframe" src="/Medallions/index.html"></iframe>
+          <iframe class="adaptive__iframe" src="/Lenses/index.html"></iframe>
+          <iframe class="adaptive__iframe" src="/FamilyMall/index.html"></iframe>
+          <iframe class="adaptive__iframe" src="/LED/index.html"></iframe>
+          <iframe class="adaptive__iframe" src="/Mango/index.html"></iframe>
+        </div>
+        
         <button class="popup__close" type="button" name="close"><span class="visually-hidden">Закрыть</span></button>
       </section>      
     </main>
 
     <footer class="page-footer">
-    
+      <p>Ссылка на мой репозиторий на <b>GitHub</b>: <a href="https://github.com/ElenaKiseljova/ElenaKiseljova.github.io">Киселёва Елена</a> </p>
     </footer>
     
     <div class="popup-overlay"></div>
