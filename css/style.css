@@ -104,6 +104,30 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
+.skills__picture {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__picture img {
+  width: auto;
+  height: 100px;
+}
+
+@media (max-width: 991px) {
+  .skills__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills__item {
+    width: 100%;
+  }
+}
+
 /* popup */
 
 .popup {
