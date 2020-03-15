@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header container">
-      <nav class="page-header__navigation navigation">
+    <header class="page-header">
+      <nav class="page-header__navigation navigation container">
         <ul class="page-header__list navigation__list navigation__list--menu">
           <li class="page-header__item navigation__item">
             <a class="page-header__link navigation__link button" href="#about-me">
@@ -69,23 +69,49 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main container">
+    <main class="page-main">
       <h1 class="page-main__title">Добро пожаловать на мой сайт!</h1>
       <p class="page-main__text">
-        Здесь я постараюсь подробно описать мои навыки и умения в WEB-разработке, чтобы убедить вас, что я - то, что вы ищете!      
+        Здесь я постараюсь подробно описать мои навыки и умения в WEB-разработке, чтобы убедить вас, что я - именно тот специалист, которого вы ищете!      
       </p>
       
       <section class="about-me" id="about-me">
         <h2 class="about-me__title title">Обо мне</h2>
-        <div class="about-me__wrapper">
+        <div class="about-me__wrapper container">
           <div class="about-me__photo">
             <picture class="about-me__picture">
               <source type="image/webp" srcset="img/photo.webp">
                 
               <img src="img/photo.png" alt="Портрет">
-            </picture>
+            </picture>    
+            <picture class="about-me__picture">
+              <source type="image/webp" srcset="img/photo1.webp">
+                
+              <img src="img/photo1.jpg" alt="Портрет">
+            </picture>       
+          </div>
+          
+          <div class="about-me__text">
+            <p class="about-me__text-item">
+              Меня зовут Елена Киселёва.
+            </p>
+            <p class="about-me__text-item">
+              Родилась я в августе 1989 года.
+            </p>
+            <p class="about-me__text-item">
+              На данный момент живу и работаю в г. Кривой Рог, Украина.
+            </p>
+            <p class="about-me__text-item">
+              В сфере WEB-разработки работаю чуть более полугода.
+            </p>
+            <p class="about-me__text-item">
+              Открыта интересным предложениям и участию в разнообразных проектах.
+            </p>
+            <p class="about-me__text-item">
+              Продолжаю развиваться в WEB отрасли осваивая новые курсы, видео и литературу по выбранному направлению.
+            </p>
             
-            <h3 class="about-me__about-me__advantages-title">Личные качества:</h3>
+            <h3 class="about-me__advantages-title">Личные качества:</h3>
             
             <ul class="about-me__advantages-list">
               <li class="about-me__advantages-item">
@@ -116,34 +142,13 @@
                 стремление к совершенству
               </li>
             </ul>
-          </div>
-          
-          <div class="about-me__text">
-            <p class="about-me__text-item">
-              Меня зовут Елена Киселёва.
-            </p>
-            <p class="about-me__text-item">
-              Родилась в августе 1989 года.
-            </p>
-            <p class="about-me__text-item">
-              На данный момент живу и работаю в г. Кривой Рог, Украина.
-            </p>
-            <p class="about-me__text-item">
-              В сфере WEB-разработки работаю чуть более полугода.
-            </p>
-            <p class="about-me__text-item">
-              Открыта интересным предложениям и участию в разнообразных проектах.
-            </p>
-            <p class="about-me__text-item">
-              Продолжаю развиваться в WEB отрасли осваивая новые курсы, видео и литературу по выбранному направлению.
-            </p>
           </div>          
         </div>
       </section>
       
       <section class="skills" id="skills">
         <h2 class="skills__title title">Навыки WEB</h2>
-        <ul class="skills__list">
+        <ul class="skills__list container">
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/html.webp">
@@ -342,7 +347,7 @@
       <section class="static" id="static">
         <h2 class="static__title title">Статическая вёрстка</h2>
         
-        <ul class="static__list static__list--text">
+        <ul class="static__list static__list--text container">
           <li class="static__item">
             Учебные статические многостраничные сайты выполнены по макетам от <a href="https://htmlacademy.ru/">HTMLAcademy</a>.
           </li>
@@ -363,7 +368,7 @@
           </li>
         </ul>
         
-        <ul class="static__list static__list--projects">
+        <ul class="static__list static__list--projects container">
           <li class="static__item">
             <button class="static__button button--project button" type="button" name="popup">Gllacy</button>
           </li>
@@ -388,7 +393,7 @@
       <section class="adaptive" id="adaptive">
         <h2 class="adaptive__title title">Адаптивная вёрстка</h2>
         
-        <ul class="adaptive__list adaptive__list--text">
+        <ul class="adaptive__list adaptive__list--text container">
           <li class="adaptive__item">
             Данные проекты комерческие и выполнены на заказ работодателя. 
           </li>
@@ -411,7 +416,7 @@
             На сайтах, где имеется множество SVG-элементов - применяю SVG-спрайты (см. Car Toy и Medallions).
           </li>
           <li class="adaptive__item">
-            Все изображения заданы тегом <code><picture></code>, в котором подключаются <b>WebP</b> изображения, если поддерживаются браузером. Так же учитывается ширина вьюпорта и в зависимости от этого подставляется то, либо иное изображение (см. Mango).
+            Все изображения заданы тегом <code>&lt;picture&gt;</code>, в котором подключаются <b>WebP</b> изображения, если поддерживаются браузером. Так же учитывается ширина вьюпорта и в зависимости от этого подставляется то, либо иное изображение (см. Mango).
           </li>      
           <li class="adaptive__item">
             Весь JS-код во всех проектах так же написан мной. Постепенно преумножаю свои знания во <b>front-end</b> .
@@ -421,7 +426,7 @@
           </li>            
         </ul>
         
-        <ul class="adaptive__list adaptive__list--projects">
+        <ul class="adaptive__list adaptive__list--projects container">
           <li class="adaptive__item">
             <button class="adaptive__button button button--project" type="button" name="popup">Medallions</button>
           </li>
@@ -475,7 +480,7 @@
           <iframe class="adaptive__iframe" src="/Mango/index.html"></iframe>
         </div>
         
-        <button class="popup__close" type="button" name="close"><span class="visually-hidden">Закрыть</span></button>
+        <button class="popup__close button" type="button" name="close"><span class="visually-hidden">Закрыть</span></button>
       </section>  
       <section class="contacts" id="contacts">
         <h2 class="contacts__title title">Хотите предложить мне работу?</h2>
