@@ -4,6 +4,8 @@ html {
   font-family: "Playfair";
   font-size: 14px;
   line-height: 100%;
+  
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -292,12 +294,12 @@ input[type="radio"].visually-hidden {
   }
   
   .navigation__list--menu {
-    display: none;
-    
     position: absolute;
     
-    top: 55px;
+    top: 50px;
     left: 0;
+    
+    z-index: 1000;
     
     flex-direction: column;
     
@@ -306,7 +308,27 @@ input[type="radio"].visually-hidden {
     
     transition: all 0.5s;
     
-    width: 80vw;
+    width: 100vw;   
+    max-width: none;
+    
+    background-image: linear-gradient(to bottom, white 0%, cyan 100%);
+  }
+  
+  .navigation--closed .navigation__list--menu {
+    transform: translateX(-100vw);
+  }
+  
+  .navigation--opened .navigation__list--menu {
+    transform: translateX(0px);
+  }
+  
+  .navigation__item {
+    justify-content: flex-start;
+    
+    width: 100%;
+    
+    padding-left: 35px;
+    padding-right: 35px;
   }
   
   .navigation__menu {

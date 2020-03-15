@@ -56,8 +56,18 @@ $(document).ready(function () {
     var element = $(this).attr("href");
     var top =$(element).offset().top;
     
-    console.log(element, top);
-    
     $("html, body").animate({scrollTop: top}, 500);   
   });
+  
+  // мобильное меню 
+  
+  $(".navigation__menu, .navigation__item").click(function () {
+    if ($(".navigation").hasClass("navigation--closed")) {
+      $(".navigation").toggleClass("navigation--opened");
+    } else {
+      $(".navigation").toggleClass("navigation--closed"); 
+    }
+  });
+  
+  $(".navigation__item")
 });
