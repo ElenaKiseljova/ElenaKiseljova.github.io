@@ -71,6 +71,14 @@ input[type="radio"].visually-hidden {
   padding-top: 20px;
   padding-bottom: 20px;
   
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 100%;
+  
+  color: orange;
+  
+  text-transform: uppercase;
+  
   background-color: cyan;
   background-image: linear-gradient(to bottom, cyan 0%, white 100%);
   
@@ -228,7 +236,7 @@ input[type="radio"].visually-hidden {
   padding-top: 10px;
   padding-bottom: 10px;
   
-  color: black;
+  color: orange;
   
   text-align: center;
   vertical-align: middle;
@@ -241,7 +249,7 @@ input[type="radio"].visually-hidden {
 .navigation__link:hover,
 .navigation__link:focus,
 .navigation__link:active {
-  color: black;
+  color: orange;
   
   background-color: rgba(0, 0, 0, 0.015);
   
@@ -266,6 +274,8 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation__menu {
+  display: none;
+  
   position: relative;
   
   width: 70px;
@@ -825,6 +835,94 @@ transform: rotate(45deg);
 /* adaptive */
 
 .adaptive {  
+  background-image: linear-gradient(to bottom, rgba(212, 212, 212, 0.5) 0%, white 100%);
+}
+
+/* php */
+
+.php {
+  width: 100%;
+  
+  padding: 0;
+  margin: 0;
+  
+  padding-bottom: 50px;
+  
+  background-image: linear-gradient(to bottom, white 0%, rgba(212, 212, 212, 0.5) 100%);
+}
+
+.php__list {
+  display: flex;
+  
+  flex-direction: column;
+  
+  justify-content: flex-start;
+  align-items: center;
+  
+  list-style: none;
+}
+
+.php__item {
+  position: relative;
+  
+  width: 70%;
+  
+  padding-left: 30px;
+  margin-bottom: 20px;
+  
+  font-size: 18px;
+  line-height: 20px;
+  
+  text-align: left;
+  vertical-align: middle;
+}
+
+.php__item::before,
+.php__item::after {
+  content: "";
+
+  position: absolute; 
+}
+
+.php__item::before {
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  border: 1px dashed cyan;
+}
+
+.php__item::after {
+  width: 10px;
+  height: 17px;
+
+  top: -1.5px;
+  left: 6.5px;
+
+  border-bottom: 3px solid cyan;
+  border-right: 3px solid cyan;
+
+  transform: rotate(45deg);
+}
+
+@media (max-width: 767px) {
+  .php__item {
+    width: 100%;
+  }
+}
+
+/* contacts */
+
+.contacts {
+  width: 100%;
+  
+  padding: 0;
+  margin: 0;
+  
   background-image: linear-gradient(to bottom, rgba(212, 212, 212, 0.5) 0%, white 100%);
 }
 
