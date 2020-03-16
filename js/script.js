@@ -54,7 +54,7 @@ $(document).ready(function () {
   $(".navigation__list--menu .navigation__link").click(function () {
     
     var element = $(this).attr("href");
-    var top =$(element).offset().top;
+    var top =$(element).offset().top - 70;
     
     $("html, body").animate({scrollTop: top}, 500);   
   });

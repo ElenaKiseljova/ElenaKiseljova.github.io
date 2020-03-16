@@ -354,13 +354,15 @@ input[type="radio"].visually-hidden {
     transform: translateX(0px);
   }
   
-  .navigation__item {
+  .navigation__list--menu .navigation__item {
     justify-content: flex-start;
     
     width: 100%;
     
     padding-left: 35px;
     padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   
   .navigation__menu {
@@ -430,7 +432,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 30px;
   
   font-size: 30px;
-  line-height: 100%;
+  line-height: 120%;
   font-weight: 700;
   
   text-transform: uppercase;
@@ -649,6 +651,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 20px;
   
   margin-bottom: 50px;
+  
+  border-radius: 10px 0 10px 0;
   
   border: 1px dashed transparent;
 }
