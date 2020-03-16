@@ -40,6 +40,17 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+/* language */
+
+body.polish .ru,
+body.polish .en,
+body.russian .pl,
+body.russian .en,
+body.english .pl,
+body.english .ru {
+  display: none;
+}
+
 /* button */
 
 .button {

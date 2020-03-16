@@ -69,5 +69,36 @@ $(document).ready(function () {
     }
   });
   
-  $(".navigation__item")
+  $(".navigation__link--language").click(function () {
+    var index = $(this).parent().index();
+    
+    if (index === 2) {
+      $("html").attr("lang", "pl-PL");
+      
+      if ($("body").hasClass("english")) {
+        $("body").removeClass("english");
+      } else {
+        $("body").removeClass("russian");
+      }
+      $("body").addClass("polish");
+    } else if (index === 1) {
+      $("html").attr("lang", "en");
+      
+      if ($("body").hasClass("polish")) {
+        $("body").removeClass("polish");
+      } else {
+        $("body").removeClass("russian");
+      }
+      $("body").addClass("english");
+    } else if (index === 0) {
+      $("html").attr("lang", "ru");
+      
+      if ($("body").hasClass("polish")) {
+        $("body").removeClass("polish");
+      } else {
+        $("body").removeClass("english");
+      }
+      $("body").addClass("russian");
+    }
+  });
 });
