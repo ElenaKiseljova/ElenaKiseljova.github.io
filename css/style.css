@@ -197,13 +197,15 @@ input[type="radio"].visually-hidden {
   align-items: center;
 }
 
-body.polish .navigation__list--menu .navigation__item {
-  width: 33%;
-}
-
-body.polish .navigation__list--menu .navigation__item a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+@media (min-width: 768px) {
+  body.polish .navigation__list--menu .navigation__item {
+    width: 33%;
+  }
+  
+  body.polish .navigation__list--menu .navigation__item a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .navigation__item--language {
