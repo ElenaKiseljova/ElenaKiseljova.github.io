@@ -993,21 +993,23 @@ transform: rotate(45deg);
   list-style: none;
 }
 
-.contacts__item {
+.contacts__item {  
   padding: 0;
   margin: 0;
   
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  padding: 5px;
   
-  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   
-  border: 1px dashed cyan;
+  transition: all 0.5s;
 }
 
 .contacts__item:hover {
-  border-color: cyan;
+  transform: scale(1.2);
+  
+  transition: all 0.5s;
 }
 
 /* footer */
