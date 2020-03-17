@@ -57,7 +57,7 @@ $(document).ready(function () {
     
     var minus = 82;
     
-    if (window.location.href.indexOf("pl") > -1) {
+    if (window.location.href.indexOf("pl") > -1 && screen.width > 767) {
       minus = 120;
     }
     
