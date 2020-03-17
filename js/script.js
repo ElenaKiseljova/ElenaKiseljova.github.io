@@ -55,7 +55,7 @@ $(document).ready(function () {
     
     var element = $(this).attr("href");
     
-    var minus = 70;
+    var minus = 82;
     
     if (window.location.href.indexOf("pl") > -1) {
       minus = 120;
