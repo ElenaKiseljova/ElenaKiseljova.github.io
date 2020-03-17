@@ -994,6 +994,14 @@ transform: rotate(45deg);
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
+  
+  border-radius: 50%;
+  
+  border: 1px dashed cyan;
+}
+
+.contacts__item:hover {
+  border-color: cyan;
 }
 
 /* footer */
