@@ -54,7 +54,14 @@ $(document).ready(function () {
   $(".navigation__list--menu .navigation__link").click(function () {
     
     var element = $(this).attr("href");
-    var top =$(element).offset().top - 70;
+    
+    var minus = 70;
+    
+    if (window.location.html.indexOf("pl") > -1) {
+      minus = 108;
+    }
+    
+    var top =$(element).offset().top - minus;
     
     $("html, body").animate({scrollTop: top}, 500);   
   });
