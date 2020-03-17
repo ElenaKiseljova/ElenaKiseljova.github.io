@@ -1020,6 +1020,11 @@ transform: rotate(45deg);
     font-size: 20px;
     line-height: 140%;
   }
+  
+  body.english .page-footer__title {
+    font-size: 17px;
+    line-height: 140%;
+  }
 }
 
 /* popup */
