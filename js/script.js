@@ -57,8 +57,8 @@ $(document).ready(function () {
     
     var minus = 70;
     
-    if (window.location.html.indexOf("pl") > -1) {
-      minus = 108;
+    if (window.location.href.indexOf("pl") > -1) {
+      minus = 120;
     }
     
     var top =$(element).offset().top - minus;

@@ -392,6 +392,12 @@ input[type="radio"].visually-hidden {
   padding-top: 90px;
 }
 
+@media (min-width: 768px) {
+  body.polish .page-main {
+    padding-top: 128px;
+  }
+}
+
 .page-main__title {
   width: 100%;
   
