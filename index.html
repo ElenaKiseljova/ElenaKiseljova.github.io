@@ -738,12 +738,11 @@
     <script defer src="js/script.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        function sendScroll() {
-            gtag('event', 'clickdopphone', {'event_category': 'site', 'event_action': 'scroll',});
-
-            $(window).off('scroll', sendScroll);
-        };
-        $(window).on('scroll', sendScroll);
+        $(".adaptive__iframe").click(function () {
+          gtag('event', 'click', {'event_category': 'button', 'event_action': 'click',});
+          
+          console.log(111);
+        });      
       });
     </script>
     
