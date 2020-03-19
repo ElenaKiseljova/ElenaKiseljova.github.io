@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161222022-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161222022-1');
+    </script>
 
     <!-- Google Analytics -->
     <script>
@@ -15,15 +23,7 @@
     </script>
     <!-- End Google Analytics -->
     
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161222022-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-161222022-1');
-    </script>
+    
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -739,8 +739,8 @@
     <script type="text/javascript">
       $(document).ready(function () {
         function sendScroll() {
-            gtag('event', 'scroll', {'event_category': 'site', 'event_action': 'scroll',});
-    
+            gtag('event', 'clickdopphone', {'event_category': 'site', 'event_action': 'scroll',});
+
             $(window).off('scroll', sendScroll);
         };
         $(window).on('scroll', sendScroll);
