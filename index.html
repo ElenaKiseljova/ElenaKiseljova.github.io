@@ -738,9 +738,9 @@
     <script defer src="js/script.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".adaptive__iframe").click(function () {
+        $(".adaptive__button").click(function () {
           gtag('event', 'click', {'event_category': 'button', 'event_action': 'click',});
-          
+          gtag('event', 'page_view');
           console.log(111);
         });      
       });
