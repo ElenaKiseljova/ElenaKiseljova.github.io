@@ -767,12 +767,8 @@
     
     <script type="text/javascript">
       $(document).ready(function () {
-        function sendScroll() {
-            gtag('event', 'scroll', {'event_category': 'site', 'event_action': 'scroll',});
-    
-            $(window).off('scroll', sendScroll);
-        };
-        $(window).on('scroll', sendScroll);
+        gtag('event', 'pageview', {'event_category': 'site', 'event_action': 'pageview',});
+        
       });
     </script>
   </body>
