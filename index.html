@@ -739,9 +739,9 @@
     <script defer src="js/script.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".adaptive__button").click(function () {
+        $(".button--project").click(function () {
           gtag('event', 'click', {'event_category': 'button', 'event_action': 'click',});
-          gtag('event', 'page_view');
+          gtag('event', 'pageview', {'event_category': 'site', 'event_action': 'pageview',});       
         });      
       });
     </script>
