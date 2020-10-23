@@ -13,30 +13,34 @@
 
     <!-- Google Analytics -->
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-161222022-1', 'auto');
-    ga('send', 'pageview');
+      ga('create', 'UA-161222022-1', 'auto');
+      ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
     
-    
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="cyan">
+    <meta name="theme-color" content="white">
+    <meta property="description" content="Здесь можно посмотреть портфолио и заказать услуги по созданию сайта."/>
+    <meta property="og:title" content="Сайт-визитка WEB-разработчика Елены Киселёвой"/>
+    <meta property="og:description" content="Здесь можно посмотреть портфолио и заказать услуги по созданию сайта."/>
+    <meta property="og:image" content="http://cv.webraido.space/img/cert-4.jpg">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://cv.webraido.space"/>
     
-    <title>CV</title>
+    <title>My CV site</title>
     
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/raido.png" type="image/png">
     
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="russian">
@@ -44,698 +48,759 @@
       <nav class="page-header__navigation navigation navigation--closed container">
         <button class="navigation__menu button" type="button" name="menu"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="page-header__list navigation__list navigation__list--menu">
-          <li class="page-header__item navigation__item">
+          <!-- <li class="page-header__item navigation__item">
             <a class="page-header__link navigation__link button" href="#about-me">
-              Обо мне
+              Вступление
             </a>
-          </li>
+          </li> -->
           <li class="page-header__item navigation__item">
-            <a class="page-header__link navigation__link button" href="#skills">
-              Навыки WEB
+            <a class="page-header__link navigation__link button" href="#adaptive">
+              Рабочие проекты
             </a>
           </li>
           <li class="page-header__item navigation__item">
             <a class="page-header__link navigation__link button" href="#static">
-              Статическая вёрстка
+              Учебные проекты
             </a>
           </li>
           <li class="page-header__item navigation__item">
-            <a class="page-header__link navigation__link button" href="#adaptive">
-              Адаптивная вёрстка
+            <a class="page-header__link navigation__link button" href="#certificate">
+              Сертификаты
             </a>
           </li>
           <li class="page-header__item navigation__item">
-            <a class="page-header__link navigation__link button" href="#php">
-              PHP проект
+            <a class="page-header__link navigation__link button" href="#skills">
+              Навыки
             </a>
-          </li>
+          </li>          
           <li class="page-header__item navigation__item">
             <a class="page-header__link navigation__link button" href="#contacts">
               Контакты
             </a>
           </li>
         </ul>
+        <a class="page-header__link button" href="#about-me">
+          <img width="100" height="50" src="img/webraido.png" alt="Лого">
+        </a>
         
-        <ul class="page-header__list navigation__list navigation__list--language">
+        <!-- <ul class="page-header__list navigation__list navigation__list--language">
           <li class="page-header__item navigation__item--language">
-            <a class="page-header__link navigation__link--language button" href="/index.html" title="Выберите язык">
+            <a class="page-header__link navigation__link--language button" href="/index.html" title="Русский">
               <span class="visually-hidden">Русский</span>
             </a>
           </li>
           <li class="page-header__item navigation__item--language">
-            <a class="page-header__link navigation__link--language button" href="/index-en.html" title="Выберите язык">
-              <span class="visually-hidden">Английский</span>
+            <a class="page-header__link navigation__link--language button" href="/index-en.html" title="English">
+              <span class="visually-hidden">English</span>
             </a>
           </li>
           <li class="page-header__item navigation__item--language">
-            <a class="page-header__link navigation__link--language button" href="/index-pl.html" title="Выберите язык">
-              <span class="visually-hidden">Польский</span>
+            <a class="page-header__link navigation__link--language button" href="/index-pl.html" title="Polski">
+              <span class="visually-hidden">Polski</span>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
     
     <main class="page-main">
-      <h1 class="page-main__title">Добро пожаловать на мой сайт!</h1>
-      <p class="page-main__text">
-        Здесь я постараюсь подробно описать мои навыки и умения в WEB-разработке, чтобы убедить вас, что я - именно тот специалист, которого вы ищете!      
-      </p>
       
       <section class="about-me" id="about-me">
-        <h2 class="about-me__title title">Обо мне</h2>
+        <h1 class="about-me__title title">Добро пожаловать на мой сайт!</h1>
         <div class="about-me__wrapper container">
+          <div class="about-me__text">
+            <q class="about-me__promo">
+              Я - Елена Киселёва. Я - WEB-разработчик. </br> 
+              В WEB-отрасли работаю уже чуть более года. 
+              </br>
+              С каждым новым проектом стараюсь пополнять свою копилочку знаний и умений.
+              </br>
+              Предлагаю вам ознакомиться с моими работами.
+              </br>
+              </br>
+              <b>Приятного просмотра!</b>
+            </q>
+            <!-- <h3 class="about-me__advantages-title">Я в работе:</h3>
+            
+            <p class="about-me__text-item">
+              целеустремлённа
+            </p>
+            <p class="about-me__text-item">
+              ответственна
+            </p>
+            <p class="about-me__text-item">
+              внимательна к деталям
+            </p>
+            <p class="about-me__text-item">
+              аккуратна
+            </p>
+            <p class="about-me__text-item">
+              неконфликтна
+            </p>
+            <p class="about-me__text-item">
+              эффективно взаимодействую с командой
+            </p>
+            <p class="about-me__text-item">
+              применяю новые знания
+            </p>
+            <p class="about-me__text-item">
+              стремлюсь к совершенству
+            </p>  -->
+            
+            <a class="contact-me contact-me--left button" href="#contacts">Связаться со мной</a>           
+          </div>          
+        
           <div class="about-me__photo">
             <picture class="about-me__picture">
               <source type="image/webp" srcset="img/photo.webp">
                 
               <img src="img/photo.png" alt="Портрет">
             </picture>    
-            <picture class="about-me__picture">
+            <!-- <picture class="about-me__picture">
               <source type="image/webp" srcset="img/photo1.webp">
                 
               <img src="img/photo1.jpg" alt="Портрет">
-            </picture>       
+            </picture>        -->
           </div>
-          
-          <div class="about-me__text">
-            <p class="about-me__text-item">
-              Меня зовут Елена Киселёва.
-            </p>
-            <p class="about-me__text-item">
-              Родилась я в августе 1989 года.
-            </p>
-            <p class="about-me__text-item">
-              На данный момент живу и работаю в г. Кривой Рог, Украина.
-            </p>
-            <p class="about-me__text-item">
-              В сфере WEB-разработки работаю чуть более полугода.
-            </p>
-            <p class="about-me__text-item">
-              Открыта интересным предложениям и участию в разнообразных проектах.
-            </p>
-            <p class="about-me__text-item">
-              Продолжаю развиваться в WEB отрасли осваивая новые курсы, видео и литературу по выбранному направлению.
-            </p>
-            
-            <h3 class="about-me__advantages-title">Личные качества:</h3>
-            
-            <ul class="about-me__advantages-list">
-              <li class="about-me__advantages-item">
-                целеустремлённость
-              </li>
-              <li class="about-me__advantages-item">
-                ответственность
-              </li>
-              <li class="about-me__advantages-item">
-                внимательность к деталям
-              </li>
-              <li class="about-me__advantages-item">
-                аккуратность в работе
-              </li>
-              <li class="about-me__advantages-item">
-                способность к изучению нового
-              </li>
-              <li class="about-me__advantages-item">
-                неконфликтность
-              </li>
-              <li class="about-me__advantages-item">
-                умение работать в команде
-              </li>
-              <li class="about-me__advantages-item">
-                умение выполнять поставленные задачи
-              </li>
-              <li class="about-me__advantages-item">
-                стремление к совершенству
-              </li>
-            </ul>
-          </div>          
+          <a class="contact-me contact-me--mobile button" href="#contacts">Связаться со мной</a>
         </div>
+      </section>   
+            
+      <section class="adaptive" id="adaptive">
+        <h2 class="adaptive__title title">Мои работы</h2>
+        
+        <div class="short">
+          <p class="short__text">
+            В моем портфолио вы сможете увидеть, как статическую, так и адаптивную верстку.
+          </p>
+          <p class="short__text">
+            Так же большую часть моих работ составляют одностраничные продающие сайты. 
+          </p>
+        </div>
+        
+        <ul class="adaptive__list adaptive__list--projects container">
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/dayzed/index.php">
+              <img width="1200" height="630" src="img/pr-1.jpg" alt="Dayzed">
+              <span class="visually-hidden">Dayzed</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/webnauts/index.php">
+              <img width="1200" height="630" src="img/pr-2.jpg" alt="Webnauts">
+              <span class="visually-hidden">Webnauts</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/blogger/index.php">
+              <img width="1200" height="630" src="img/pr-3.jpg" alt="Blogger">
+              <span class="visually-hidden">Blogger</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/green/index.php">
+              <img width="1200" height="630" src="img/pr-4.jpg" alt="Green">
+              <span class="visually-hidden">Green</span></button>
+          </li>
+          
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/Medallions/index.html">
+              <img width="1200" height="630" src="img/pr-5.jpg" alt="Medallions">
+              <span class="visually-hidden">Medallions</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/Car/index.html">
+              <img width="1200" height="630" src="img/pr-6.jpg" alt="Car Toy">
+              <span class="visually-hidden">Car Toy</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/Lenses/index.html">
+              <img width="1200" height="630" src="img/pr-7.jpg" alt="Проект">
+              <span class="visually-hidden">Lenses</span></button>
+          </li>          
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/LED/index.html">
+              <img width="1200" height="630" src="img/pr-8.jpg" alt="LED">
+              <span class="visually-hidden">LED</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/Mango/index.html">
+              <img width="1200" height="630" src="img/pr-9.jpg" alt="Mango">
+              <span class="visually-hidden">Mango</span></button>
+          </li>
+          <li class="adaptive__item">
+            <button class="adaptive__button button button--project" type="button" name="popup" data-iframe="/FamilyMall/index.html">
+              <img width="1200" height="630" src="img/pr-10.jpg" alt="FamilyMall">
+              <span class="visually-hidden">FamilyMall</span></button>
+          </li>
+        </ul>
+        <a class="contact-me button" href="#contacts">Связаться со мной</a> 
       </section>
       
+      <section class="static" id="static">
+        <h2 class="static__title title">Мои учебные проекты</h2>
+        
+        <div class="short">
+          <p class="short__text">
+            Здесь можно посмотреть мои стартовые работы.
+          </p>
+          <p class="short__text">
+            Первые 2 работы - это натяжка вёрстки на Wordpress
+          </p>
+        </div>
+        
+        <ul class="static__list static__list--projects container">
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="http://webraido.space">
+              <img width="1200" height="630" src="img/pr-17.jpg" alt="Sparrow">
+              <span class="visually-hidden">Sparrow</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="http://web-raido.space">
+              <img width="1200" height="630" src="img/pr-18.jpg" alt="Childhood">
+              <span class="visually-hidden">Childhood</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/Gllacy/index.html">
+              <img width="1200" height="630" src="img/pr-11.jpg" alt="Gllacy">
+              <span class="visually-hidden">Gllacy</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/Barbershop/index.html">
+              <img width="1200" height="630" src="img/pr-12.jpg" alt="Barbershop">
+              <span class="visually-hidden">Barbershop</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/Device/index.html">
+              <img width="1200" height="630" src="img/pr-13.jpg" alt="Device">
+              <span class="visually-hidden">Device</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/nerds/index.html">
+              <img width="1200" height="630" src="img/pr-14.jpg" alt="Nёrds">
+              <span class="visually-hidden">Nёrds</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/Sedona/index.html">
+              <img width="1200" height="630" src="img/pr-15.jpg" alt="Sedona">
+              <span class="visually-hidden">Sedona</span></button>
+          </li>
+          <li class="static__item">
+            <button class="static__button button--project button" type="button" name="popup" data-iframe="/Technomart/index.html">
+              <img width="1200" height="630" src="img/pr-16.jpg" alt="Technomart">
+              <span class="visually-hidden">Technomart</span></button>
+          </li>
+        </ul>
+      
+        <a class="contact-me button" href="#contacts">Связаться со мной</a> 
+      </section>       
+      
+      <section class="certificate" id="certificate">
+        <h2 class="certificate__title title">Мои сертификаты</h2>
+        
+        <div class="short">
+          <p class="short__text">
+            Мои сертификаты от <a href="https://www.sololearn.com/Profile/19406822" target="_blank">SoloLearn</a>
+          </p>
+        </div>
+        
+        <ul class="certificate__list container">
+          <li class="certificate__item">
+            <a href="img/cert-1.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-1.jpg" alt="Сертификат" />
+            </a>
+          </li>
+          <li class="certificate__item">
+            <a href="img/cert-2.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-2.jpg" alt="Сертификат" />
+            </a>
+          </li>
+          <li class="certificate__item">
+            <a href="img/cert-3.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-3.jpg" alt="Сертификат" />
+            </a>
+          </li>
+          <li class="certificate__item">
+            <a href="img/cert-4.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-4.jpg" alt="Сертификат" />
+            </a>
+          </li>
+          <li class="certificate__item">
+            <a href="img/cert-5.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-5.jpg" alt="Сертификат" />
+            </a>
+          </li>
+          <li class="certificate__item">
+            <a href="img/cert-6.jpg" data-fancybox="cert-img">
+            	<img src="img/cert-6.jpg" alt="Сертификат" />
+            </a>
+          </li>
+        </ul>
+      
+        <a class="contact-me button" href="#contacts">Связаться со мной</a> 
+      </section>
+            
       <section class="skills" id="skills">
-        <h2 class="skills__title title">Навыки WEB</h2>
+        <h2 class="skills__title title">Мои навыки в WEB</h2>
+        
+        <div class="short">
+          <p class="short__text">
+            Здесь перечислю всё, с чем сталкивалась в процессе работы.
+          </p>
+          <p class="short__text">
+            Так же перечислю всё, что использую для автоматизации, упрощения, удобства и ускорения своего рабочего процесса.
+          </p>
+        </div>
+        
         <ul class="skills__list container">
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/html.webp">
                 
-              <img src="img/html.png" alt="Итый навык">
+              <img src="img/html.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span><b>Семантическая</b> вёрстка по стандартам HTML5</span>
-              <span>Проверка <b>валидности</b> страницы на W3C </span>                     
+              <span><b>W3C</b>-валидация</span>
+              <span>
+                <code>&lt;video&gt;</code>,
+                <code>&lt;audio&gt;</code>,
+                <code>&lt;picture&gt;</code>,
+                <code>&lt;canvas&gt;</code>
+                и т.д.
+              </span>  
+              
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/css.webp">
                 
-              <img src="img/css.png" alt="Итый навык">
+              <img src="img/css.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Использование по максимуму возможностей каскадных таблий стилей по стандартам CSS3:</span>
-              <span><b>анимация</b>, <b>transition</b>, <b>псевдо- классы/элементы</b>, <b>flex-сетки</b></span>
+              <span>Градиенты, трансформации, transition, flex и т.д.</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/js.webp">
                 
-              <img src="img/js.png" alt="Итый навык">
+              <img src="img/js.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Базовые навыки работы с JS</span>
-              <span>Способность разбираться/чинить чужой код</span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/BEM.webp">
-                
-              <img src="img/BEM.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Вёрстка по методологии БЭМ</span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/less.webp">
-                
-              <img src="img/less.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Использование в работе препроцессора LESS:</span>
-              <span><b>вложенность</b>, <b>примеси</b>, <b>переменные</b></span>
+              <span>DOM, события, функции, объекты, массивы</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/jquery.webp">
                 
-              <img src="img/jquery.png" alt="Итый навык">
+              <img src="img/jquery.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Базовое применение библиотеки <b>JQuery</b> в работе</span>
+              <span>Активно использую в работе</span>
             </p>
           </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/filezilla.webp">
-                
-              <img src="img/filezilla.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Работа с <b>FTP-клиентом</b> FileZilla</span>
-              <span>Вызрузка/загрузка файлов на хостинг</span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/ispManager.webp">
-                
-              <img src="img/ispManager.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Работа с панелью управления хостингом <b>ISP Manager</b></span>
-              <span>Создание/удаление поддоменов, управление доступом</span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/cron.webp">
-                
-              <img src="img/cron.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Создание <b>CRON-задач</b> на хостинге с использованием <b>WGET</b></span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/OpenServer.webp">
-                
-              <img src="img/OpenServer.jpg" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Использование <b>Open Server</b> для просмотра локально php файлов</span>
-              <span>Создание и тестирование простейших баз данных в <b>MySQL</b></span>
-            </p>
-          </li>
-          <li class="skills__item">
-            <picture class="skills__picture">
-              <source type="image/webp" srcset="img/gulp.webp">
-                
-              <img src="img/gulp.png" alt="Итый навык">
-            </picture>
-            <p class="skills__text">
-              <span>Использование GULP для автоматицации процесса разработки:</span>
-              <span><b>минификация изображений/html/css/js</b>, расстановка префиксов для <b>кроссбраузерности</b>, создание спрайтов <b>SVG</b>, компиляция <b>LESS файлов в CSS</b>, <b>browsersync</b> совместно с OpenServer</span>
-            </p>
-          </li>          
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/php.webp">
                 
-              <img src="img/php.png" alt="Итый навык">
+              <img src="img/php.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Вёрстка сразу в php для использования серверных возможностей:</span>
-              <span><b>массивы</b>, <b>функции</b>, <b>шаблоны</b>, <b>переменные</b>, <b>интеграция с CRM-системой</b>, <b>cookie</b>, <b>session</b>, <b>HTTP-запросы</b></span>
+              <span>
+                Функции, циклы, сессии, куки, валидация, массивы, объекты
+              </span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
-              <source type="image/webp" srcset="img/figma.webp">
+              <source type="image/webp" srcset="img/sql.webp">
                 
-              <img src="img/figma.png" alt="Итый навык">
+              <img src="img/sql.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Работа с макетами <b>Figma</b></span>
+              <span>Основы</span>
+              <span>Работа с базами данных при натяжке верстки на Wordpress</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
-              <source type="image/webp" srcset="img/photoshop.webp">
+              <source type="image/webp" srcset="img/wp.webp">
                 
-              <img src="img/photoshop.png" alt="Итый навык">
+              <img src="img/wp.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Работа с макетами <b>Photoshop</b></span>
+              <span>
+                Натяжка верстки
+              </span>
+              <span>
+                Работа с плагинами
+              </span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/Bootstrap.webp">
                 
-              <img src="img/Bootstrap.png" alt="Итый навык">
+              <img src="img/Bootstrap.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>В некоторых проектах использовала систему сеток <b>Bootstrap4</b></span>
+              <span>Знакома с сетками Bootstrap</span>
+            </p>
+          </li>
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/BEM.webp">
+                
+              <img src="img/BEM.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Верстаю по методологии БЭМ</span>
+            </p>
+          </li>
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/less.webp">
+                
+              <img src="img/less.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Использую препроцессор LESS</span>
+            </p>
+          </li>
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/gulp.webp">
+                
+              <img src="img/gulp.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Использую Gulp для сборки проектов</span>
+            </p>
+          </li>
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/OpenServer.webp">
+                
+              <img src="img/OpenServer.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Локальный сервер</span>
+            </p>
+          </li>  
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/figma.webp">
+                
+              <img src="img/figma.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Работаю с макетами Figma</span>
+            </p>
+          </li>
+          <li class="skills__item">
+            <picture class="skills__picture">
+              <source type="image/webp" srcset="img/photoshop.webp">
+                
+              <img src="img/photoshop.png" alt="skills">
+            </picture>
+            <p class="skills__text">
+              <span>Работаю с макетами Photoshop</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
               <source type="image/webp" srcset="img/github.webp">
                 
-              <img src="img/github.png" alt="Итый навык">
+              <img src="img/github.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Использование системы контроля версий <b>GitHub</b></span>
+              <span>Использую систему контроля версий Git</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
-              <source type="image/webp" srcset="img/atom.webp">
+              <source type="image/webp" srcset="img/ispManager.webp">
                 
-              <img src="img/atom.png" alt="Итый навык">
+              <img src="img/ispManager.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Работа в текстовом редакторе <b>Atom</b></span>
-              <span>Использование расширение <b>EditorConfig</b> для соблюдения единого стиля отступов</span>
+              <span>Работала с ispManager</span>
             </p>
           </li>
           <li class="skills__item">
             <picture class="skills__picture">
-              <source type="image/webp" srcset="img/Chrome.webp">
+              <source type="image/webp" srcset="img/cron.webp">
                 
-              <img src="img/Chrome.png" alt="Итый навык">
+              <img src="img/cron.png" alt="skills">
             </picture>
             <p class="skills__text">
-              <span>Использование панели <b>DevTools</b> для тестирования/отладки сайтов</span>
-              <span>Создание <b>адаптивных</b> и <b>кроссбраузерных</b> сайтов</span>
-              <span>Тестирование <b>скорости загрузки</b> страниц</span>
+              <span>Настраивала отложенное выполнение PHP сценариев</span>
             </p>
           </li>
-        </ul>
-      </section>
-      
-      <section class="static" id="static">
-        <h2 class="static__title title">Статическая вёрстка</h2>
-        
-        <ul class="static__list static__list--text container">
-          <li class="static__item">
-            Учебные статические многостраничные сайты выполнены по макетам от <a href="https://htmlacademy.ru/">HTMLAcademy</a>.
-          </li>
-          <li class="static__item">
-            Работает не весь функционал сайта, а только формы обратной связи, всплывающие окошки регистрации и некоторые пункты в меню (в основном "Каталог" и "Главная").
-          </li>
-          <li class="static__item">
-            В проектах проводится валидация введенных данных в формах.
-          </li>
-          <li class="static__item">
-            В проекте Gllacy подключена карта Google через API.
-          </li>
-          <li class="static__item">
-            Проекты Sedona и Gllacy частично адаптивны. Ширина контейнера на ширине экрана менее 1200px меняется на 768px или 900px соответственно. 
-          </li>
-          <li class="static__item">
-            Для построения сеток использованы flex. Для исправления браузерных умолчаний во всех проектах подключен файл normalize.css.
-          </li>
-        </ul>
-        
-        <ul class="static__list static__list--projects container">
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Gllacy</button>
-          </li>
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Barbershop</button>
-          </li>
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Device</button>
-          </li>
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Nёrds</button>
-          </li>
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Sedona</button>
-          </li>
-          <li class="static__item">
-            <button class="static__button button--project button" type="button" name="popup">Technomart</button>
-          </li>
-        </ul>
-      </section>      
-      
-      <section class="adaptive" id="adaptive">
-        <h2 class="adaptive__title title">Адаптивная вёрстка</h2>
-        
-        <ul class="adaptive__list adaptive__list--text container">
-          <li class="adaptive__item">
-            Данные проекты комерческие и выполнены на заказ работодателя. 
-          </li>
-          <li class="adaptive__item">
-            Основная часть - <b>одностраничные сайты</b>.  
-          </li>
-          <li class="adaptive__item">
-            Исключение - FamilyMall. Данный проект был своеобразной пробой пера, поэтому он не идеален, но в процессе дальнейшей работы на компанию-заказчика я его совершенствую и дополняю новым функционалом. Здесь его представляю, как пример <b>многостраничного сайта</b> моего производства.
-          </li>
-          <li class="adaptive__item">
-            Все представленные сайты адаптированы под мобильные, планшетные и десктопные разрешения дисплеев.
-          </li>
-          <li class="adaptive__item">
-            В первых трёх (см. Lenses, Car Toy и Medallions) представленных сайтах вёрстка выполнена по методологии БЭМ.
-          </li>
-          <li class="adaptive__item">
-            Остальные свёрстаны мной до внедрения принципов БЭМ в мою работу. Но в них есть примеры моего умения работать, к примеру с <b>GIF-изображениями</b> (см. LED - в дальнейщих проектах GIF-анимация заменена видео). 
-          </li>
-          <li class="adaptive__item">
-            На сайтах, где имеется множество SVG-элементов - применяю SVG-спрайты (см. Car Toy и Medallions).
-          </li>
-          <li class="adaptive__item">
-            Все изображения заданы тегом <code>&lt;picture&gt;</code>, в котором подключаются <b>WebP</b> изображения, если поддерживаются браузером. Так же учитывается ширина вьюпорта и в зависимости от этого подставляется то, либо иное изображение (см. Mango).
-          </li>      
-          <li class="adaptive__item">
-            Весь JS-код во всех проектах так же написан мной. Постепенно преумножаю свои знания во <b>front-end</b> .
-          </li>  
-          <li class="adaptive__item">
-            Исходники проектов находятся в корне каждого проекта в папке <b>source</b>.
-          </li>            
-        </ul>
-        
-        <ul class="adaptive__list adaptive__list--projects container">
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">Medallions</button>
-          </li>
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">Car Toy</button>
-          </li>
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">Lenses</button>
-          </li>
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">FamilyMall</button>
-          </li>
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">LED</button>
-          </li>
-          <li class="adaptive__item">
-            <button class="adaptive__button button button--project" type="button" name="popup">Mango</button>
-          </li>
-        </ul>
-      </section>
-      
-      <section class="php" id="php">
-        <h2 class="php__title title">PHP проект</h2>
-        
-        <ul class="php__list container">
-          <li class="php__item">
-            На даный момент работаю над учебным проектом от <a href="https://htmlacademy.ru/">HTMLAcademy</a> <b>Yetycave</b>. Папка с текущей версией проекта лежит на <b><a href="https://www.dropbox.com/sh/6z5jqvy5htulw08/AAAXqr7zK63aP9rotNzObU7Wa?dl=0">DropBox</a></b>.
-          </li>
-          <li class="php__item">
-            Изучаю, как осуществляется на стороне сервера: валидация форм, работа с файлами, работа с данными пользователя, авторицация и аутентификация, защита передаваемых данных.
-          </li>
-          <li class="php__item">
-            Так же делаю первые шаги в изучении и работе с <b>SQL</b>.
-          </li>
-        </ul>
+        </ul>                
       </section>
       
       <section class="contacts" id="contacts">
-        <h2 class="contacts__title title">Хотите предложить мне работу?</h2>
+        <h2 class="contacts__title title">Мои контакты</h2>
         
-        <div class="contacts__wrapper container">
-          <p class="contacts__text">Я всегда открыта интересным проектам и предложениям!</p>
-          <p class="contacts__text">Для связи со мной можете использовать один из нижеприведённых контактов:</p>
-          
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a href="https://github.com/ElenaKiseljova/ElenaKiseljova.github.io">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 width="50px" height="50px" viewBox="0 0 578.305 578.305" style="enable-background:new 0 0 578.305 578.305;"
-                	 xml:space="preserve">
-                	 <g>
-                	 	<path d="M533.32,160.379c0.532-26.518-5.294-53.33-10.024-79.731c-1.628-9.088-4.927-17.87-8.177-26.487
-                	 		c-2.448-6.487-9.676-10.618-16.334-9.198c-4.309,0.918-8.183,1.812-11.94,3.048c-39.327,12.938-75.741,31.86-110.723,53.844
-                	 		c-4.7,2.95-11.536,4.015-17.21,3.599c-13.574-0.992-27.001-4.37-40.569-5.013c-33.58-1.591-67.093-0.569-100.368,5.251
-                	 		c-4.626,0.808-10.716,0.012-14.559-2.472C165.27,78.537,125.582,57.411,80.937,45.55c-6.702-1.781-13.599-0.838-15.294,1.824
-                	 		c-1.035,1.628-1.971,3.317-2.485,5.128c-4.823,16.946-10.539,33.807-13.342,51.114c-3.341,20.655-6.554,41.935-4.969,62.565
-                	 		c0.998,12.968-2.583,20.937-9.669,30.037C11.407,226.757,0.703,261.861,0.048,300.35c-0.563,32.919,3.794,65,13.819,96.47
-                	 		c15.355,48.219,45.006,84.406,89.652,107.95c36.708,19.357,76.708,26.818,117.639,28.256c36.892,1.292,73.856,0.196,110.79,0.404
-                	 		c37.021,0.208,73.532-3.091,108.948-14.633c35.447-11.549,66.121-30.184,89.922-59.486
-                	 		c34.376-42.326,45.079-92.186,47.276-144.965c1.684-40.361-6.542-78.329-30.178-111.347
-                	 		C538.332,189.603,532.959,178.097,533.32,160.379z M462.047,469.641c-15.876,13.728-35.288,20.227-55.16,24.976
-                	 		c-38.99,9.315-78.69,11.635-118.519,9.896c-39.37,1.707-78.287-0.747-116.592-9.762c-28.256-6.646-54.052-17.821-72.032-42.075
-                	 		c-28.611-38.599-35.924-112.057,11.353-152.148c12.056-10.221,25.502-16.708,41.39-17.717c17.534-1.12,35.074-3.305,52.595-3.097
-                	 		c44.199,0.526,88.378,2.724,132.571,3.054c20.184,0.146,40.509-4.56,60.545-3.348c18.207,1.102,37.351,4.455,53.875,11.781
-                	 		c27.546,12.215,42.374,36.983,46.854,65.992C505.597,400.326,496.796,439.586,462.047,469.641z"/>
-                	 	<ellipse cx="390.026" cy="385.552" rx="42.124" ry="56.298"/>
-                	 	<ellipse cx="189.028" cy="385.552" rx="42.13" ry="56.298"/>
-                	 </g>
-                </svg>
-    
-                <span class="visually-hidden">Ссылка на мой репозиторий на <b>GitHub</b></span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a href="skype:elena.a.kiseljova?chat">
-                <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 291.364 291.364" style="enable-background:new 0 0 291.364 291.364;" xml:space="preserve">
-                	 <path style="fill:#00AFF0;" d="M282.966,176.612c2.094-9.495,3.204-19.309,3.204-29.405c0-75.661-62.197-137.011-138.941-137.011
-                	 	c-8.093,0-16.032,0.692-23.752,2.003C111.061,4.479,96.367,0,80.618,0C36.101,0,0.032,35.577,0.032,79.475
-                	 	c0,14.657,4.051,28.385,11.07,40.193c-1.848,8.894-2.813,18.107-2.813,27.539c0,75.688,62.197,134.753,138.932,134.753
-                	 	c8.694,0,17.197-0.792,25.436-2.294c11.352,6.008,24.316,11.698,38.099,11.698c44.508,0,80.577-35.568,80.577-79.466
-                	 	C291.333,199.235,288.319,187.245,282.966,176.612z"/>
-                	 <path style="fill:#FFFFFF;" d="M210.6,203.131c-5.362,7.62-13.21,13.61-23.542,17.916c-10.333,4.342-22.568,6.491-36.724,6.491
-                	 	c-16.978,0-30.98-2.95-42.023-8.858c-7.811-4.242-14.174-9.923-19.072-17.006c-4.88-7.083-7.328-13.983-7.328-20.693
-                	 	c0-3.878,1.466-7.21,4.397-9.969c2.931-2.795,6.673-4.169,11.198-4.169c3.678,0,6.8,1.065,9.331,3.241
-                	 	c2.549,2.158,4.725,5.353,6.509,9.604c2.194,5.053,4.552,9.268,7.11,12.645c2.531,3.377,6.118,6.181,10.724,8.375
-                	 	c4.625,2.176,10.697,3.286,18.198,3.286c10.324,0,18.717-2.203,25.181-6.637c6.445-4.415,9.686-9.959,9.686-16.578
-                	 	c0-5.244-1.748-9.532-5.226-12.782c-3.487-3.277-7.984-5.781-13.501-7.501c-5.508-1.739-12.882-3.578-22.131-5.517
-                	 	c-12.354-2.649-22.705-5.781-31.025-9.331c-8.33-3.578-14.957-8.43-19.837-14.575c-4.898-6.172-7.338-13.819-7.338-22.95
-                	 	c0-8.721,2.576-16.45,7.747-23.214c5.162-6.773,12.618-11.971,22.413-15.613c9.777-3.641,21.285-5.453,34.494-5.453
-                	 	c10.56,0,19.7,1.211,27.411,3.605c7.711,2.422,14.093,5.626,19.172,9.623c5.089,3.997,8.812,8.184,11.152,12.581
-                	 	c2.349,4.37,3.523,8.685,3.523,12.836c0,3.814-1.457,7.274-4.388,10.324c-2.931,3.059-6.591,4.597-10.97,4.597
-                	 	c-3.997,0-7.028-0.929-9.104-2.758c-2.076-1.839-4.324-4.843-6.737-9.022c-3.141-5.972-6.882-10.633-11.27-13.974
-                	 	c-4.388-3.35-11.416-5.025-21.121-5.025c-8.985,0-16.25,1.803-21.767,5.453c-5.517,3.623-8.284,8.011-8.284,13.118
-                	 	c0,3.15,0.956,5.899,2.822,8.202c1.866,2.321,4.452,4.279,7.756,5.927c3.268,1.657,6.6,2.95,9.959,3.905
-                	 	c3.359,0.938,8.922,2.294,16.678,4.097c9.686,2.085,18.471,4.397,26.337,6.91c7.857,2.522,14.557,5.59,20.074,9.167
-                	 	c5.508,3.605,9.823,8.175,12.909,13.692c3.086,5.499,4.643,12.244,4.643,20.238C218.639,186.899,215.945,195.502,210.6,203.131z"/>
-                </svg>
-                <span class="visually-hidden">Ссылка на мой профиль в <b>Skype</b></span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a href="https://twitter.com/EKiseljova">
-                <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 410.155 410.155" style="enable-background:new 0 0 410.155 410.155;" xml:space="preserve">
-                <path style="fill:#76A9EA;" d="M403.632,74.18c-9.113,4.041-18.573,7.229-28.28,9.537c10.696-10.164,18.738-22.877,23.275-37.067
-                	l0,0c1.295-4.051-3.105-7.554-6.763-5.385l0,0c-13.504,8.01-28.05,14.019-43.235,17.862c-0.881,0.223-1.79,0.336-2.702,0.336
-                	c-2.766,0-5.455-1.027-7.57-2.891c-16.156-14.239-36.935-22.081-58.508-22.081c-9.335,0-18.76,1.455-28.014,4.325
-                	c-28.672,8.893-50.795,32.544-57.736,61.724c-2.604,10.945-3.309,21.9-2.097,32.56c0.139,1.225-0.44,2.08-0.797,2.481
-                	c-0.627,0.703-1.516,1.106-2.439,1.106c-0.103,0-0.209-0.005-0.314-0.015c-62.762-5.831-119.358-36.068-159.363-85.14l0,0
-                	c-2.04-2.503-5.952-2.196-7.578,0.593l0,0C13.677,65.565,9.537,80.937,9.537,96.579c0,23.972,9.631,46.563,26.36,63.032
-                	c-7.035-1.668-13.844-4.295-20.169-7.808l0,0c-3.06-1.7-6.825,0.485-6.868,3.985l0,0c-0.438,35.612,20.412,67.3,51.646,81.569
-                	c-0.629,0.015-1.258,0.022-1.888,0.022c-4.951,0-9.964-0.478-14.898-1.421l0,0c-3.446-0.658-6.341,2.611-5.271,5.952l0,0
-                	c10.138,31.651,37.39,54.981,70.002,60.278c-27.066,18.169-58.585,27.753-91.39,27.753l-10.227-0.006
-                	c-3.151,0-5.816,2.054-6.619,5.106c-0.791,3.006,0.666,6.177,3.353,7.74c36.966,21.513,79.131,32.883,121.955,32.883
-                	c37.485,0,72.549-7.439,104.219-22.109c29.033-13.449,54.689-32.674,76.255-57.141c20.09-22.792,35.8-49.103,46.692-78.201
-                	c10.383-27.737,15.871-57.333,15.871-85.589v-1.346c-0.001-4.537,2.051-8.806,5.631-11.712c13.585-11.03,25.415-24.014,35.16-38.591
-                	l0,0C411.924,77.126,407.866,72.302,403.632,74.18L403.632,74.18z"/>
-                </svg>
-                <span class="visually-hidden">Ссылка на мой профиль в <b>Twitter</b></span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a href="https://www.instagram.com/elena.a.kiseljova/">
-                <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;" xml:space="preserve">
-                  <g id="XMLID_13_">
-                  	
-                  		<linearGradient id="XMLID_2_" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
-                  		<stop  offset="0" style="stop-color:#E09B3D"/>
-                  		<stop  offset="0.3" style="stop-color:#C74C4D"/>
-                  		<stop  offset="0.6" style="stop-color:#C21975"/>
-                  		<stop  offset="1" style="stop-color:#7024C4"/>
-                  	</linearGradient>
-                  	<path id="XMLID_17_" style="fill:url(#XMLID_2_);" d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722
-                  		c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156
-                  		C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156
-                  		c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722
-                  		c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
-                  	
-                  		<linearGradient id="XMLID_3_" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
-                  		<stop  offset="0" style="stop-color:#E09B3D"/>
-                  		<stop  offset="0.3" style="stop-color:#C74C4D"/>
-                  		<stop  offset="0.6" style="stop-color:#C21975"/>
-                  		<stop  offset="1" style="stop-color:#7024C4"/>
-                  	</linearGradient>
-                  	<path id="XMLID_81_" style="fill:url(#XMLID_3_);" d="M275.517,133C196.933,133,133,196.933,133,275.516
-                  		s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6
-                  		c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083
-                  		C362.6,323.611,323.611,362.6,275.517,362.6z"/>
-                  	
-                  		<linearGradient id="XMLID_4_" gradientUnits="userSpaceOnUse" x1="418.306" y1="4.5714" x2="418.306" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
-                  		<stop  offset="0" style="stop-color:#E09B3D"/>
-                  		<stop  offset="0.3" style="stop-color:#C74C4D"/>
-                  		<stop  offset="0.6" style="stop-color:#C21975"/>
-                  		<stop  offset="1" style="stop-color:#7024C4"/>
-                  	</linearGradient>
-                  	<circle id="XMLID_83_" style="fill:url(#XMLID_4_);" cx="418.306" cy="134.072" r="34.149"/>
-                  </g>
-                </svg>
-                <span class="visually-hidden">Ссылка на мой профиль в <b>Instagram</b></span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a href="mailto:e.a.kiseljova@gmail.com">
-                <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 326.234 326.234" style="enable-background:new 0 0 326.234 326.234;" xml:space="preserve">
-                	 <path d="M162.162,119.717c-24.814,0-42.836,18.773-42.836,44.622c0,26.145,17.611,44.394,42.836,44.394
-                	 	s42.842-18.249,42.842-44.394C205.004,138.49,186.984,119.717,162.162,119.717z"/>
-                	 <path d="M163.121,0.007C73.029,0.007,0,73.043,0,163.124C0,253.2,73.029,326.228,163.121,326.228
-                	 	c90.07,0,163.113-73.027,163.113-163.104C326.234,73.043,253.191,0.007,163.121,0.007z M230.502,231.205
-                	 	c-12.547,0-22.42-9.4-24.857-22.722c-0.043,0.051-0.086,0.094-0.129,0.139c-11.082,11.423-26.475,17.703-43.354,17.703
-                	 	c-16.871,0-32.27-6.28-43.35-17.703c-11.014-11.357-17.078-27.077-17.078-44.283c0-17.201,6.059-32.958,17.063-44.372
-                	 	c11.094-11.509,26.498-17.844,43.365-17.844c16.875,0,32.273,6.335,43.371,17.844c0.012,0.013,0.023,0.026,0.035,0.038
-                	 	c1.217-3.415,4.471-5.868,8.309-5.868c4.85,0,8.801,3.935,8.801,8.795v79.09c0,7.524,4.029,11.589,7.824,11.589
-                	 	c11.643,0,19.789-19.626,19.789-47.716c0-51.675-36.285-89.176-86.299-89.176c-51.023,0-88.041,37.221-88.041,88.51
-                	 	c0,48.845,35.811,84.288,85.17,84.288c10.906,0,26.188-3.745,35.533-8.722c4.297-2.279,9.629-0.649,11.91,3.639
-                	 	c2.275,4.285,0.646,9.619-3.65,11.897c-11.732,6.251-30.164,10.784-43.793,10.784c-28.6,0-54.727-10.261-73.539-28.894
-                	 	c-18.844-18.663-29.225-44.592-29.225-72.992c0-29.573,10.629-56.555,29.945-75.973c19.35-19.431,46.229-30.131,75.69-30.131
-                	 	c28.996,0,55.461,10.795,74.471,30.376c18.973,19.525,29.416,46.656,29.416,76.394
-                	 	C267.879,205.572,253.201,231.205,230.502,231.205z"/>
-                </svg>
-                <span class="visually-hidden">Ссылка на мою электронную почту <b>Gmail</b></span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380676631163">
-                <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                	<circle style="fill:#71E2EF;" cx="256" cy="256" r="256"/>
-                	<g>
-                		<path style="fill:#38C6D9;" d="M177.436,432.868l79.124,79.124c132.879-0.286,241.969-101.805,254.269-231.531L333.819,103.45
-                			L177.436,432.868z"/>
-                		<polygon style="fill:#38C6D9;" points="221.72,72.142 265.856,116.277 213.333,108.318 	"/>
-                	</g>
-                	<path style="fill:#282828;" d="M319.066,97.832h-91.51V83.609c0-7.854-6.368-14.222-14.222-14.222s-14.222,6.368-14.222,14.222
-                		v14.222h-6.177c-12.298,0-22.268,9.969-22.268,22.268v296.8c0,12.298,9.969,22.268,22.268,22.268h126.133
-                		c12.298,0,22.268-9.969,22.268-22.268v-296.8C341.333,107.801,331.364,97.832,319.066,97.832z"/>
-                	<path style="fill:#161616;" d="M319.066,97.832h-63.641v341.333h63.641c12.298,0,22.268-9.969,22.268-22.268V120.099
-                		C341.333,107.801,331.364,97.832,319.066,97.832z"/>
-                	<rect x="199.111" y="126.276" style="fill:#8C8C8C;" width="113.778" height="85.333"/>
-                	<rect x="255.431" y="126.276" style="fill:#777777;" width="57.458" height="85.333"/>
-                	<g>
-                		<path style="fill:#8C8C8C;" d="M213.333,321.939L213.333,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,315.571,221.187,321.939,213.333,321.939
-                			z"/>
-                		<path style="fill:#8C8C8C;" d="M256,321.939L256,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,315.571,263.854,321.939,256,321.939z"/>
-                	</g>
-                	<path style="fill:#5B5B5B;" d="M298.667,321.939L298.667,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                		c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,315.571,306.521,321.939,298.667,321.939z
-                		"/>
-                	<g>
-                		<path style="fill:#8C8C8C;" d="M213.333,364.606L213.333,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,358.238,221.187,364.606,213.333,364.606
-                			z"/>
-                		<path style="fill:#8C8C8C;" d="M256,364.606L256,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,358.238,263.854,364.606,256,364.606z"/>
-                	</g>
-                	<path style="fill:#5B5B5B;" d="M298.667,364.606L298.667,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                		c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,358.238,306.521,364.606,298.667,364.606z
-                		"/>
-                	<g>
-                		<path style="fill:#8C8C8C;" d="M213.333,407.273L213.333,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,400.905,221.187,407.273,213.333,407.273
-                			z"/>
-                		<path style="fill:#8C8C8C;" d="M256,407.273L256,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,400.905,263.854,407.273,256,407.273z"/>
-                	</g>
-                	<g>
-                		<path style="fill:#5B5B5B;" d="M256,293.495c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
-                			c7.854,0,14.222-6.368,14.222-14.222S263.854,293.495,256,293.495z"/>
-                		<path style="fill:#5B5B5B;" d="M256,336.162c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
-                			c7.854,0,14.222-6.368,14.222-14.222C270.222,342.53,263.854,336.162,256,336.162z"/>
-                		<path style="fill:#5B5B5B;" d="M256,378.828c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
-                			c7.854,0,14.222-6.368,14.222-14.222C270.222,385.196,263.854,378.828,256,378.828z"/>
-                		<path style="fill:#5B5B5B;" d="M298.667,407.273L298.667,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
-                			c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,400.905,306.521,407.273,298.667,407.273
-                			z"/>
-                	</g>
-                	<path style="fill:#18A000;" d="M236.573,268.498h-29.705c-4.284,0-7.758-3.474-7.758-7.758v-3.448c0-4.284,3.474-7.758,7.758-7.758
-                		h29.705c4.284,0,7.758,3.474,7.758,7.758v3.448C244.331,265.025,240.857,268.498,236.573,268.498z"/>
-                	<path style="fill:#E03A00;" d="M305.131,268.498h-29.705c-4.284,0-7.758-3.474-7.758-7.758v-3.448c0-4.284,3.474-7.758,7.758-7.758
-                		h29.705c4.284,0,7.758,3.474,7.758,7.758v3.448C312.889,265.025,309.415,268.498,305.131,268.498z"/>
-                </svg>
-  
-                <span class="visually-hidden">Мой мобильный номер: <b>+38-067-663-11-63</b></span>
-              </a>
-            </li>
-          </ul>
+        <div class="contacts__wrapper container">        
+          <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85584.57434353982!2d33.39609476581203!3d47.90701477998968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db2108c02ce365%3A0xa6ceb626875a042c!2z0JTQvtC70LPQuNC90YbQtdCy0YHQutC40Lkg0YDQsNC50L7QvSwg0JrRgNC40LLQvtC5INCg0L7Qsywg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDUwMDAw!5e0!3m2!1sru!2sua!4v1603223230143!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        
+          <div class="contacts__text">
+            <p>
+              <i>
+                Вот мои контактные данные.
+                </br>
+                Звоните! Пишите!
+                </br>
+                Я всегда открыта для участия в интересных проектах!
+              </i>
+            </p>
+            
+            <p>
+              <b>Адрес: </b>
+              г. Кривой Рог, Украина
+            </p>
+            <p>
+              <b>Телефон: </b>
+              <a href="tel:+380676631163">+38-067-663-11-63</a>
+            </p>
+            <p>
+              <b>Email: </b>
+              <a href="mail:e.a.kiseljova@gmail.com">e.a.kiseljova@gmail.com</a>
+            </p>
+          </div>
         </div>        
       </section>    
     </main>
-    <footer class="page-footer container" id="contacts">
-      <h2 class="page-footer__title title">Благодарю за внимание! &#10084;</h2>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <h2 class="page-footer__title"><i>Я в соцсетях: </i></h2>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://github.com/ElenaKiseljova/ElenaKiseljova.github.io" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="30px" height="30px" viewBox="0 0 578.305 578.305" style="enable-background:new 0 0 578.305 578.305;"
+                 xml:space="preserve">
+                 <g>
+                  <path d="M533.32,160.379c0.532-26.518-5.294-53.33-10.024-79.731c-1.628-9.088-4.927-17.87-8.177-26.487
+                    c-2.448-6.487-9.676-10.618-16.334-9.198c-4.309,0.918-8.183,1.812-11.94,3.048c-39.327,12.938-75.741,31.86-110.723,53.844
+                    c-4.7,2.95-11.536,4.015-17.21,3.599c-13.574-0.992-27.001-4.37-40.569-5.013c-33.58-1.591-67.093-0.569-100.368,5.251
+                    c-4.626,0.808-10.716,0.012-14.559-2.472C165.27,78.537,125.582,57.411,80.937,45.55c-6.702-1.781-13.599-0.838-15.294,1.824
+                    c-1.035,1.628-1.971,3.317-2.485,5.128c-4.823,16.946-10.539,33.807-13.342,51.114c-3.341,20.655-6.554,41.935-4.969,62.565
+                    c0.998,12.968-2.583,20.937-9.669,30.037C11.407,226.757,0.703,261.861,0.048,300.35c-0.563,32.919,3.794,65,13.819,96.47
+                    c15.355,48.219,45.006,84.406,89.652,107.95c36.708,19.357,76.708,26.818,117.639,28.256c36.892,1.292,73.856,0.196,110.79,0.404
+                    c37.021,0.208,73.532-3.091,108.948-14.633c35.447-11.549,66.121-30.184,89.922-59.486
+                    c34.376-42.326,45.079-92.186,47.276-144.965c1.684-40.361-6.542-78.329-30.178-111.347
+                    C538.332,189.603,532.959,178.097,533.32,160.379z M462.047,469.641c-15.876,13.728-35.288,20.227-55.16,24.976
+                    c-38.99,9.315-78.69,11.635-118.519,9.896c-39.37,1.707-78.287-0.747-116.592-9.762c-28.256-6.646-54.052-17.821-72.032-42.075
+                    c-28.611-38.599-35.924-112.057,11.353-152.148c12.056-10.221,25.502-16.708,41.39-17.717c17.534-1.12,35.074-3.305,52.595-3.097
+                    c44.199,0.526,88.378,2.724,132.571,3.054c20.184,0.146,40.509-4.56,60.545-3.348c18.207,1.102,37.351,4.455,53.875,11.781
+                    c27.546,12.215,42.374,36.983,46.854,65.992C505.597,400.326,496.796,439.586,462.047,469.641z"/>
+                  <ellipse cx="390.026" cy="385.552" rx="42.124" ry="56.298"/>
+                  <ellipse cx="189.028" cy="385.552" rx="42.13" ry="56.298"/>
+                 </g>
+              </svg>
+  
+              <span class="visually-hidden">Ссылка на мой репозиторий на <b>GitHub</b></span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="skype:elena.a.kiseljova?chat" target="_blank">
+              <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 291.364 291.364" style="enable-background:new 0 0 291.364 291.364;" xml:space="preserve">
+                 <path style="fill:#00AFF0;" d="M282.966,176.612c2.094-9.495,3.204-19.309,3.204-29.405c0-75.661-62.197-137.011-138.941-137.011
+                  c-8.093,0-16.032,0.692-23.752,2.003C111.061,4.479,96.367,0,80.618,0C36.101,0,0.032,35.577,0.032,79.475
+                  c0,14.657,4.051,28.385,11.07,40.193c-1.848,8.894-2.813,18.107-2.813,27.539c0,75.688,62.197,134.753,138.932,134.753
+                  c8.694,0,17.197-0.792,25.436-2.294c11.352,6.008,24.316,11.698,38.099,11.698c44.508,0,80.577-35.568,80.577-79.466
+                  C291.333,199.235,288.319,187.245,282.966,176.612z"/>
+                 <path style="fill:#FFFFFF;" d="M210.6,203.131c-5.362,7.62-13.21,13.61-23.542,17.916c-10.333,4.342-22.568,6.491-36.724,6.491
+                  c-16.978,0-30.98-2.95-42.023-8.858c-7.811-4.242-14.174-9.923-19.072-17.006c-4.88-7.083-7.328-13.983-7.328-20.693
+                  c0-3.878,1.466-7.21,4.397-9.969c2.931-2.795,6.673-4.169,11.198-4.169c3.678,0,6.8,1.065,9.331,3.241
+                  c2.549,2.158,4.725,5.353,6.509,9.604c2.194,5.053,4.552,9.268,7.11,12.645c2.531,3.377,6.118,6.181,10.724,8.375
+                  c4.625,2.176,10.697,3.286,18.198,3.286c10.324,0,18.717-2.203,25.181-6.637c6.445-4.415,9.686-9.959,9.686-16.578
+                  c0-5.244-1.748-9.532-5.226-12.782c-3.487-3.277-7.984-5.781-13.501-7.501c-5.508-1.739-12.882-3.578-22.131-5.517
+                  c-12.354-2.649-22.705-5.781-31.025-9.331c-8.33-3.578-14.957-8.43-19.837-14.575c-4.898-6.172-7.338-13.819-7.338-22.95
+                  c0-8.721,2.576-16.45,7.747-23.214c5.162-6.773,12.618-11.971,22.413-15.613c9.777-3.641,21.285-5.453,34.494-5.453
+                  c10.56,0,19.7,1.211,27.411,3.605c7.711,2.422,14.093,5.626,19.172,9.623c5.089,3.997,8.812,8.184,11.152,12.581
+                  c2.349,4.37,3.523,8.685,3.523,12.836c0,3.814-1.457,7.274-4.388,10.324c-2.931,3.059-6.591,4.597-10.97,4.597
+                  c-3.997,0-7.028-0.929-9.104-2.758c-2.076-1.839-4.324-4.843-6.737-9.022c-3.141-5.972-6.882-10.633-11.27-13.974
+                  c-4.388-3.35-11.416-5.025-21.121-5.025c-8.985,0-16.25,1.803-21.767,5.453c-5.517,3.623-8.284,8.011-8.284,13.118
+                  c0,3.15,0.956,5.899,2.822,8.202c1.866,2.321,4.452,4.279,7.756,5.927c3.268,1.657,6.6,2.95,9.959,3.905
+                  c3.359,0.938,8.922,2.294,16.678,4.097c9.686,2.085,18.471,4.397,26.337,6.91c7.857,2.522,14.557,5.59,20.074,9.167
+                  c5.508,3.605,9.823,8.175,12.909,13.692c3.086,5.499,4.643,12.244,4.643,20.238C218.639,186.899,215.945,195.502,210.6,203.131z"/>
+              </svg>
+              <span class="visually-hidden">Ссылка на мой профиль в <b>Skype</b></span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com/EKiseljova" target="_blank">
+              <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 410.155 410.155" style="enable-background:new 0 0 410.155 410.155;" xml:space="preserve">
+              <path style="fill:#76A9EA;" d="M403.632,74.18c-9.113,4.041-18.573,7.229-28.28,9.537c10.696-10.164,18.738-22.877,23.275-37.067
+                l0,0c1.295-4.051-3.105-7.554-6.763-5.385l0,0c-13.504,8.01-28.05,14.019-43.235,17.862c-0.881,0.223-1.79,0.336-2.702,0.336
+                c-2.766,0-5.455-1.027-7.57-2.891c-16.156-14.239-36.935-22.081-58.508-22.081c-9.335,0-18.76,1.455-28.014,4.325
+                c-28.672,8.893-50.795,32.544-57.736,61.724c-2.604,10.945-3.309,21.9-2.097,32.56c0.139,1.225-0.44,2.08-0.797,2.481
+                c-0.627,0.703-1.516,1.106-2.439,1.106c-0.103,0-0.209-0.005-0.314-0.015c-62.762-5.831-119.358-36.068-159.363-85.14l0,0
+                c-2.04-2.503-5.952-2.196-7.578,0.593l0,0C13.677,65.565,9.537,80.937,9.537,96.579c0,23.972,9.631,46.563,26.36,63.032
+                c-7.035-1.668-13.844-4.295-20.169-7.808l0,0c-3.06-1.7-6.825,0.485-6.868,3.985l0,0c-0.438,35.612,20.412,67.3,51.646,81.569
+                c-0.629,0.015-1.258,0.022-1.888,0.022c-4.951,0-9.964-0.478-14.898-1.421l0,0c-3.446-0.658-6.341,2.611-5.271,5.952l0,0
+                c10.138,31.651,37.39,54.981,70.002,60.278c-27.066,18.169-58.585,27.753-91.39,27.753l-10.227-0.006
+                c-3.151,0-5.816,2.054-6.619,5.106c-0.791,3.006,0.666,6.177,3.353,7.74c36.966,21.513,79.131,32.883,121.955,32.883
+                c37.485,0,72.549-7.439,104.219-22.109c29.033-13.449,54.689-32.674,76.255-57.141c20.09-22.792,35.8-49.103,46.692-78.201
+                c10.383-27.737,15.871-57.333,15.871-85.589v-1.346c-0.001-4.537,2.051-8.806,5.631-11.712c13.585-11.03,25.415-24.014,35.16-38.591
+                l0,0C411.924,77.126,407.866,72.302,403.632,74.18L403.632,74.18z"/>
+              </svg>
+              <span class="visually-hidden">Ссылка на мой профиль в <b>Twitter</b></span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.instagram.com/elena.a.kiseljova/" target="_blank">
+              <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 551.034 551.034" style="enable-background:new 0 0 551.034 551.034;" xml:space="preserve">
+                <g id="XMLID_13_">
+                  
+                    <linearGradient id="XMLID_2_" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
+                    <stop  offset="0" style="stop-color:#E09B3D"/>
+                    <stop  offset="0.3" style="stop-color:#C74C4D"/>
+                    <stop  offset="0.6" style="stop-color:#C21975"/>
+                    <stop  offset="1" style="stop-color:#7024C4"/>
+                  </linearGradient>
+                  <path id="XMLID_17_" style="fill:url(#XMLID_2_);" d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722
+                    c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156
+                    C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156
+                    c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722
+                    c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
+                  
+                    <linearGradient id="XMLID_3_" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.5714" x2="275.517" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
+                    <stop  offset="0" style="stop-color:#E09B3D"/>
+                    <stop  offset="0.3" style="stop-color:#C74C4D"/>
+                    <stop  offset="0.6" style="stop-color:#C21975"/>
+                    <stop  offset="1" style="stop-color:#7024C4"/>
+                  </linearGradient>
+                  <path id="XMLID_81_" style="fill:url(#XMLID_3_);" d="M275.517,133C196.933,133,133,196.933,133,275.516
+                    s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6
+                    c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083
+                    C362.6,323.611,323.611,362.6,275.517,362.6z"/>
+                  
+                    <linearGradient id="XMLID_4_" gradientUnits="userSpaceOnUse" x1="418.306" y1="4.5714" x2="418.306" y2="549.7202" gradientTransform="matrix(1 0 0 -1 0 554)">
+                    <stop  offset="0" style="stop-color:#E09B3D"/>
+                    <stop  offset="0.3" style="stop-color:#C74C4D"/>
+                    <stop  offset="0.6" style="stop-color:#C21975"/>
+                    <stop  offset="1" style="stop-color:#7024C4"/>
+                  </linearGradient>
+                  <circle id="XMLID_83_" style="fill:url(#XMLID_4_);" cx="418.306" cy="134.072" r="34.149"/>
+                </g>
+              </svg>
+              <span class="visually-hidden">Ссылка на мой профиль в <b>Instagram</b></span>
+            </a>
+          </li>
+          <!-- <li class="social__item">
+            <a href="mailto:e.a.kiseljova@gmail.com">
+              <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 326.234 326.234" style="enable-background:new 0 0 326.234 326.234;" xml:space="preserve">
+                 <path d="M162.162,119.717c-24.814,0-42.836,18.773-42.836,44.622c0,26.145,17.611,44.394,42.836,44.394
+                  s42.842-18.249,42.842-44.394C205.004,138.49,186.984,119.717,162.162,119.717z"/>
+                 <path d="M163.121,0.007C73.029,0.007,0,73.043,0,163.124C0,253.2,73.029,326.228,163.121,326.228
+                  c90.07,0,163.113-73.027,163.113-163.104C326.234,73.043,253.191,0.007,163.121,0.007z M230.502,231.205
+                  c-12.547,0-22.42-9.4-24.857-22.722c-0.043,0.051-0.086,0.094-0.129,0.139c-11.082,11.423-26.475,17.703-43.354,17.703
+                  c-16.871,0-32.27-6.28-43.35-17.703c-11.014-11.357-17.078-27.077-17.078-44.283c0-17.201,6.059-32.958,17.063-44.372
+                  c11.094-11.509,26.498-17.844,43.365-17.844c16.875,0,32.273,6.335,43.371,17.844c0.012,0.013,0.023,0.026,0.035,0.038
+                  c1.217-3.415,4.471-5.868,8.309-5.868c4.85,0,8.801,3.935,8.801,8.795v79.09c0,7.524,4.029,11.589,7.824,11.589
+                  c11.643,0,19.789-19.626,19.789-47.716c0-51.675-36.285-89.176-86.299-89.176c-51.023,0-88.041,37.221-88.041,88.51
+                  c0,48.845,35.811,84.288,85.17,84.288c10.906,0,26.188-3.745,35.533-8.722c4.297-2.279,9.629-0.649,11.91,3.639
+                  c2.275,4.285,0.646,9.619-3.65,11.897c-11.732,6.251-30.164,10.784-43.793,10.784c-28.6,0-54.727-10.261-73.539-28.894
+                  c-18.844-18.663-29.225-44.592-29.225-72.992c0-29.573,10.629-56.555,29.945-75.973c19.35-19.431,46.229-30.131,75.69-30.131
+                  c28.996,0,55.461,10.795,74.471,30.376c18.973,19.525,29.416,46.656,29.416,76.394
+                  C267.879,205.572,253.201,231.205,230.502,231.205z"/>
+              </svg>
+              <span class="visually-hidden">Ссылка на мою электронную почту <b>Gmail</b></span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="tel:+380676631163">
+              <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <circle style="fill:#71E2EF;" cx="256" cy="256" r="256"/>
+                <g>
+                  <path style="fill:#38C6D9;" d="M177.436,432.868l79.124,79.124c132.879-0.286,241.969-101.805,254.269-231.531L333.819,103.45
+                    L177.436,432.868z"/>
+                  <polygon style="fill:#38C6D9;" points="221.72,72.142 265.856,116.277 213.333,108.318 	"/>
+                </g>
+                <path style="fill:#282828;" d="M319.066,97.832h-91.51V83.609c0-7.854-6.368-14.222-14.222-14.222s-14.222,6.368-14.222,14.222
+                  v14.222h-6.177c-12.298,0-22.268,9.969-22.268,22.268v296.8c0,12.298,9.969,22.268,22.268,22.268h126.133
+                  c12.298,0,22.268-9.969,22.268-22.268v-296.8C341.333,107.801,331.364,97.832,319.066,97.832z"/>
+                <path style="fill:#161616;" d="M319.066,97.832h-63.641v341.333h63.641c12.298,0,22.268-9.969,22.268-22.268V120.099
+                  C341.333,107.801,331.364,97.832,319.066,97.832z"/>
+                <rect x="199.111" y="126.276" style="fill:#8C8C8C;" width="113.778" height="85.333"/>
+                <rect x="255.431" y="126.276" style="fill:#777777;" width="57.458" height="85.333"/>
+                <g>
+                  <path style="fill:#8C8C8C;" d="M213.333,321.939L213.333,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,315.571,221.187,321.939,213.333,321.939
+                    z"/>
+                  <path style="fill:#8C8C8C;" d="M256,321.939L256,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,315.571,263.854,321.939,256,321.939z"/>
+                </g>
+                <path style="fill:#5B5B5B;" d="M298.667,321.939L298.667,321.939c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                  c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,315.571,306.521,321.939,298.667,321.939z
+                  "/>
+                <g>
+                  <path style="fill:#8C8C8C;" d="M213.333,364.606L213.333,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,358.238,221.187,364.606,213.333,364.606
+                    z"/>
+                  <path style="fill:#8C8C8C;" d="M256,364.606L256,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,358.238,263.854,364.606,256,364.606z"/>
+                </g>
+                <path style="fill:#5B5B5B;" d="M298.667,364.606L298.667,364.606c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                  c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,358.238,306.521,364.606,298.667,364.606z
+                  "/>
+                <g>
+                  <path style="fill:#8C8C8C;" d="M213.333,407.273L213.333,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C227.556,400.905,221.187,407.273,213.333,407.273
+                    z"/>
+                  <path style="fill:#8C8C8C;" d="M256,407.273L256,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C270.222,400.905,263.854,407.273,256,407.273z"/>
+                </g>
+                <g>
+                  <path style="fill:#5B5B5B;" d="M256,293.495c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
+                    c7.854,0,14.222-6.368,14.222-14.222S263.854,293.495,256,293.495z"/>
+                  <path style="fill:#5B5B5B;" d="M256,336.162c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
+                    c7.854,0,14.222-6.368,14.222-14.222C270.222,342.53,263.854,336.162,256,336.162z"/>
+                  <path style="fill:#5B5B5B;" d="M256,378.828c-0.193,0-0.383,0.021-0.574,0.029v28.386c0.191,0.007,0.381,0.029,0.574,0.029
+                    c7.854,0,14.222-6.368,14.222-14.222C270.222,385.196,263.854,378.828,256,378.828z"/>
+                  <path style="fill:#5B5B5B;" d="M298.667,407.273L298.667,407.273c-7.854,0-14.222-6.368-14.222-14.222l0,0
+                    c0-7.854,6.368-14.222,14.222-14.222l0,0c7.854,0,14.222,6.368,14.222,14.222l0,0C312.889,400.905,306.521,407.273,298.667,407.273
+                    z"/>
+                </g>
+                <path style="fill:#18A000;" d="M236.573,268.498h-29.705c-4.284,0-7.758-3.474-7.758-7.758v-3.448c0-4.284,3.474-7.758,7.758-7.758
+                  h29.705c4.284,0,7.758,3.474,7.758,7.758v3.448C244.331,265.025,240.857,268.498,236.573,268.498z"/>
+                <path style="fill:#E03A00;" d="M305.131,268.498h-29.705c-4.284,0-7.758-3.474-7.758-7.758v-3.448c0-4.284,3.474-7.758,7.758-7.758
+                  h29.705c4.284,0,7.758,3.474,7.758,7.758v3.448C312.889,265.025,309.415,268.498,305.131,268.498z"/>
+              </svg>
+  
+              <span class="visually-hidden">Мой мобильный номер: <b>+38-067-663-11-63</b></span>
+            </a>
+          </li> -->
+        </ul>
+        <p class="page-footer__thank"><i>Благодарю за внимание! </i>&#128591;</p>
+      </div>      
     </footer>
     
     <section class="popup">
       <h2 class="visually-hidden">Всплывающее окошко с примерами работ</h2>
       
       <div class="popup__list">
-        <iframe class="static__iframe" src="/Gllacy/index.html"></iframe>
-        <iframe class="static__iframe" src="/Barbershop/index.html"></iframe>
-        <iframe class="static__iframe" src="/Device/index.html"></iframe>
-        <iframe class="static__iframe" src="/nerds/index.html"></iframe>
-        <iframe class="static__iframe" src="/Sedona/index.html"></iframe>
-        <iframe class="static__iframe" src="/Technomart/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/Medallions/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/Car/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/Lenses/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/FamilyMall/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/LED/index.html"></iframe>
-        <iframe class="adaptive__iframe" src="/Mango/index.html"></iframe>
+        <iframe class="popup__iframe" frameborder="0"></iframe>
       </div>
       
       <button class="popup__close button" type="button" name="close"><span class="visually-hidden">Закрыть</span></button>
     </section>        
     
-    <div class="popup-overlay"></div>
+    <div class="popup__overlay"></div>
     
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script defer src="js/cookie.min.js"></script>
+    <script defer src="js/fancybox.min.js"></script>
     <script defer src="js/script.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {

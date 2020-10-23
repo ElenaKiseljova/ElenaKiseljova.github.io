@@ -2,31 +2,21 @@ $(document).ready(function () {
   // открытие модального окна с iframe
   
   $(".static__button, .adaptive__button").click(function () {
-    var index = $(this).parent().index();
+    var iframeLink = $(this).data('iframe');
     
-    if ($(this).hasClass("static__button")) {
-      $(".static__iframe").eq(index).addClass("active");
-    } else {
-      $(".adaptive__iframe").eq(index).addClass("active");
-    } 
+    $(".popup__iframe").attr('src', iframeLink);
         
     $(".popup").fadeIn();  
-    $(".popup-overlay").fadeIn(); 
+    $(".popup__overlay").fadeIn(); 
     $("html").css("overflow-y", "hidden");
   });
   
   // закрытие модального окна с iframe (кнопка, фон)
   
-  $(".popup__close, .popup-overlay").click(function () {
+  $(".popup__close, .popup__overlay").click(function () {
     $(".popup").fadeOut();
-    $(".popup-overlay").fadeOut();
+    $(".popup__overlay").fadeOut();
     $("html").css("overflow-y", "auto");
-    
-    if ($(".static__iframe").hasClass("active")) {
-      $(".static__iframe").removeClass("active"); 
-    } else {
-      $(".adaptive__iframe").removeClass("active");
-    }   
   });
   
   // закрытие модального окна с iframe (esc)
@@ -37,25 +27,19 @@ $(document).ready(function () {
           e.preventDefault();
           
           $(".popup").fadeOut();
-          $(".popup-overlay").fadeOut();
-          $("html").css("overflow-y", "auto");
-          
-          if ($(".static__iframe").hasClass("active")) {
-            $(".static__iframe").removeClass("active"); 
-          } else {
-            $(".adaptive__iframe").removeClass("active");
-          }         
+          $(".popup__overlay").fadeOut();
+          $("html").css("overflow-y", "auto");        
         }
       }      
     });
     
   // анимированный переход по якорям в навигационном меню
   
-  $(".navigation__list--menu .navigation__link").click(function () {
+  $("a[href^='#']").click(function () {
     
     var element = $(this).attr("href");
     
-    var minus = 82;
+    var minus = 100;
     
     if (window.location.href.indexOf("pl") > -1 && screen.width > 767) {
       minus = 120;
@@ -76,5 +60,26 @@ $(document).ready(function () {
     }
   });
   
+  // Сертификаты
   
+  $('[data-fancybox]').fancybox({
+    mobile: {
+      clickOutside: "close",
+      clickContent : "close",
+      clickSlide : "close"
+    },
+    toolbar: false,
+    arrows: false,
+    loop: true
+  });
+  
+  $(".skills__picture").mousemove(function(e) {
+    var xText = e.clientX - 100;
+    var yText = e.clientY - 100;
+    
+    $(this).siblings(".skills__text").css({
+      top: yText,
+      left: xText
+    });   
+  });
 });
