@@ -8,18 +8,19 @@
     width:100px;
     height:100px;
     background: green;
+   margin: 3px;
     }
   </style>
   <script>
-    gsap.to('selector',{
+    gsap.to('.selector',{
     x:100,
       y:100,
       background: 'orange',
       duration: 1,
       delay: .5,
       repeat: 5,
-      repeatDelay: 1
-      
+      repeatDelay: 1,
+      stagger: .1
     });
   </script>
 </head>
