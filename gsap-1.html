@@ -5,7 +5,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <style>
   .selector{
-display: inline;
+/*display: inline;*/
     width:100px;
     height:100px;
     background: green;
@@ -38,6 +38,16 @@ display: inline;
       repeatDelay: 1,
       stagger: .2, // Отставание каждого следующего элемента от старта предыдущего
 ease: "power2.inOut", // Переходы
+// paused: true, // При работе с кнопками и т.п.
+onCompleted: function(){ // Срабатывает для каждого фрагмента
+alert('onCompleted');
+},
+onStart: function(){ // Срабатывает 1 раз
+alert('onStart');
+},
+onEnd: function(){ // Срабатывает на каждом фрагменте
+alert('onEnd');
+},
     });
   </script>
   </body>
