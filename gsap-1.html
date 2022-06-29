@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <style>
+  .selector{
+    width:100px;
+    height:100px;
+    background: green;
+    }
+  </style>
+  <script>
+    gsap.to('selector',{
+    x:100,
+      y:100,
+      background: 'orange',
+      duration: 1,
+      delay: .5,
+      repeat: 5,
+      repeatDelay: 1
+      
+    });
+  </script>
+</head>
+<body>
+  <div class="selector"></div>
+    <div class="selector"></div>
+  </body>
+</html>
