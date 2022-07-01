@@ -5,13 +5,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jump</title>
+  <title>Game</title>
 
 <style>
 
 #canvas {
   width: 100%;
   border: 1px solid black;
+background: lightgreen;
  }
  button {
      width:50px;
@@ -22,6 +23,17 @@
 </head>
 
 <body>
+
+<canvas id="canvas" width="600" height="400">
+  Your browser does not support the HTML5 canvas tag.
+</canvas>
+<br /><br />
+<div align="center">
+    <button id="up">↑</button><br />
+    <button id="left">←</button>
+    <button id="down">↓</button>
+    <button id="right">→</button>
+</div>
 <script>
 window.onload = function() {
     var canvas = document.getElementById("canvas");
