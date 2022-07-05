@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate h1</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+
+      font-family: sans-serif;
+    }
+
+    h1 {
+      position: relative;
+
+      font-size: 4rem;
+
+      color: orange;
+
+      opacity: .2;
+    }
+
+    .letter {
+      --width: 100%;
+
+      opacity: 0;
+
+      /* border: 1px dashed #41850e; */
+    }
+
+    .letter::after {
+      content: '';
+      position: absolute;
+
+      left: 50%;
+      top: calc(100% + 1px);
+
+      width: var(--width);
+      height: 5px;
+
+      transform: translateX(-50%);
+
+      border-radius: 50%;
+
+      background: #eeeeee;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Анимация заголовка, test</h1>
+
+  <script>
+    const h1 = document.querySelector('h1');
+    const letters = h1.innerHTML.split('');
+
+    h1.innerHTML = '';
+    h1.style.opacity = 1;
+
+    let translateY = 0;
+
+    const spanArray = letters.map(letter => {
+      const item = document.createElement('span');
+      item.classList.add('letter');
+      item.innerHTML = letter;
+
+      // item.style.transform = `translateY(${translateY}px)`;
+
+      // translateY += 1;
+
+      h1.appendChild(item);
+
+      const rect = item.getBoundingClientRect();
+
+      item.style.top = rect.top + 'px';
+      item.y = rect.top; //тут под вопросом правильность
+
+      item.style.left = rect.left + 'px';
+      item.x = rect.left; //тут под вопросом правильность
+
+      // console.log(rect);
+
+      return item;
+    });
+
+    spanArray.forEach(span => {
+      span.style.position = 'absolute';
+    });
+
+    // console.log(letters, spanArray);
+
+    setTimeout(() => {
+      gsap.to('.letter', {
+        duration: 1,
+        opacity: 1,
+        '--width': '30%',
+        color: 'rgb(136, 206, 2)',
+        top: function (i, el) {
+          return el.y + 100;
+        },
+        left: function (i, el) {
+          return el.x + i * 10;
+        },
+        delay: function (i, el) {
+          return i * .05;
+        },
+        // stagger: .1,
+        // translateY: 0,
+        // onUpdate: function (i) {
+        //   console.log(i);
+        //   h1.style.setProperty('--width', '50%');
+        // }
+      });
+    }, 1000);
+
+  </script>
+</body>
+
+</html>
