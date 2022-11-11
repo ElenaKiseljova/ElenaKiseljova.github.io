@@ -1,0 +1,61 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+.t-width {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: salmon;
+}
+
+/* Ink Cursor */
+.goo {
+  position: absolute;
+  top: 0;
+}
+
+
+.ink-cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  /* -webkit-filter: url("#goo"); */
+  /* filter: url("#goo"); */
+}
+
+.ink-cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 991px) {
+
+  .ink-cursor,
+  .ink-cursor span {
+    display: none
+  }
+}
