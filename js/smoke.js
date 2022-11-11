@@ -760,8 +760,8 @@ function splat(x, y, dx, dy, color) {
   gl.uniform1i(splatProgram.uniforms.uTarget, density.read[2]);
   gl.uniform3f(
     splatProgram.uniforms.color,
-    color[0] * 0.3,
-    color[1] * 0.3,
+    color[0] * 0.2,
+    color[1] * 0.6,
     color[2] * 0.3
   );
   blit(density.write[1]);
@@ -776,7 +776,7 @@ function splat(x, y, dx, dy, color) {
 
 function multipleSplats(amount) {
   for (let i = 0; i < amount; i++) {
-    const color = [0.2, 0.2, 0.06];
+    const color = [0.2, 0.6, 0.06];
     const x = canvas.width * Math.random();
     const y = canvas.height * Math.random();
     const dx = 1000 * (Math.random() - 0.5);
@@ -823,7 +823,7 @@ canvas.addEventListener(
 
 canvas.addEventListener("mousemove", () => {
   pointers[0].down = true;
-  pointers[0].color = [0.8, 0.6, 0.03];
+  pointers[0].color = [0.2, 0.6, 0.03];
 });
 
 canvas.addEventListener("touchstart", (e) => {
@@ -837,7 +837,7 @@ canvas.addEventListener("touchstart", (e) => {
     pointers[i].down = true;
     pointers[i].x = touches[i].pageX;
     pointers[i].y = touches[i].pageY;
-    pointers[i].color = [0.2, 0.2, 0.03];
+    pointers[i].color = [0.2, 0.6, 0.03];
   }
 });
 
