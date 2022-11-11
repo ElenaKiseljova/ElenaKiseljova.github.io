@@ -1,0 +1,162 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.squares {
+  --i: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 20px;
+}
+
+.squares div {
+  width: 15vw;
+  height: 15vw;
+
+  background-color: rgb(157, 87, calc(261 * var(--i)));
+}
+
+.anim-x-left {
+  animation: breath-x-left 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+.anim-x-right {
+  animation: breath-x-right 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+.anim-right {
+  animation: breath-right 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+.anim-left {
+  animation: breath-left 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+.anim-top {
+  animation: breath-top 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+.anim-bottom {
+  animation: breath-bottom 6s infinite linear;
+  backface-visibility: hidden;
+}
+
+@keyframes breath-x-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-20px) translateY(0px) rotate(0deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes breath-x-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(20px) translateY(0px) rotate(0deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes breath-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(5deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes breath-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(-5deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes breath-top {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(-20px) rotate(0deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes breath-bottom {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(20px) rotate(0deg) scale(1.05, 1.05);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
