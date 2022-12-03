@@ -1,0 +1,168 @@
+.clock {
+  position: absolute;
+
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: calc(400 / 1500 * 100vw);
+  height: calc(400 / 1500 * 100vw);
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clock::before {
+  position: absolute;
+
+  z-index: 10000;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  content: '';
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hour .hr {
+  width: calc(160 / 1500 * 100vw);
+  height: calc(160 / 1500 * 100vw);
+}
+
+.clock .min .mn {
+  width: calc(190 / 1500 * 100vw);
+  height: calc(190 / 1500 * 100vw);
+}
+
+.clock .sec .sc {
+  width: calc(230 / 1500 * 100vw);
+  height: calc(230 / 1500 * 100vw);
+}
+
+.hr,
+.mn,
+.sc {
+  /* position: absolute; */
+
+  display: flex;
+
+  /* align-items: center; */
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.hr::before {
+  position: absolute;
+
+  z-index: 10;
+
+  width: calc(8 / 1500 * 100vw);
+  height: calc(80 / 1500 * 100vw);
+
+  border-radius: 6px 6px 0 0;
+
+  background: #ff105e;
+
+  content: '';
+}
+
+.mn::before {
+  position: absolute;
+
+  z-index: 11;
+
+  width: calc(4 / 1500 * 100vw);
+  height: calc(90 / 1500 * 100vw);
+
+  border-radius: 6px 6px 0 0;
+
+  background: #ffffff;
+
+  content: '';
+}
+
+.sc::before {
+  position: absolute;
+
+  z-index: 12;
+
+  width: calc(2 / 1500 * 100vw);
+  height: calc(150 / 1500 * 100vw);
+
+  border-radius: 6px 6px 0 0;
+
+  background: #ffffff;
+
+  content: '';
+}
+
+.clock .bg {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 65%;
+  height: 65%;
+
+  opacity: 0.7;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.clock .bg .number {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  height: 50%;
+
+  transform-origin: bottom right;
+  transform: rotate(calc(2deg * var(--i)));
+
+  user-select: none;
+}
+
+.clock .bg .number span {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  height: fit-content;
+
+  font-size: 1.1em;
+  font-weight: 600;
+
+  color: gray;
+
+  transform: rotate(calc(-2deg * var(--i) - 45deg));
+}
+

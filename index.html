@@ -1,29 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 
-<head>
-  <meta charset="UTF-8">
+    <title>Интересности</title>
 
-  <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  </style>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/clock.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">
+        <h1>Меню</h1>
 
-<body>
-  <h1>Menu</h1>
-  <ol>
-    <li><a href="gsap-1.html">[gsap]Падающие квадраты</a></li>
-    <li><a href="gsap-2-3.html">[gsap]Плавность + Изменение св-в объекта</a></li>
-    <li><a href="gsap-4.html">[gsap]Анимация заголовка</a></li>
-    <li><a href="game.html">[canvas]Простая игра</a></li>
-    <li><a href="jump.html">[canvas]Прыгающий мячик</a></li>
-    <li><a href="rain.html">[canvas]Дождь из огурцов</a></li>
-    <li><a href="smoke.html">[canvas + WebGL]Дым</a></li>
-  </ol>
+        <ol class="arrow">
+          <li><a href="Anime.js.html">[Anime.js]Anime.js</a></li>
+          <li><a href="cube.html">[CSS]Cube</a></li>
+          <li><a href="eyes.html">[JS + CSS]Eyes moving</a></li>
+          <li><a href="spin-wheel.html">[JS + CSS]Spin Wheel</a></li>
+          <!-- <li><a href="eyes.html">[JS + CSS]Eyes</a></li> -->
 
+          <li><a href="rain.html">[canvas]Дождь из огурцов</a></li>
+          <li><a href="game.html">[canvas]Простая игра</a></li>
+          <li><a href="jump.html">[canvas]Прыгающий мячик</a></li>
 
+          <li><a href="smoke.html">[canvas + WebGL]Дым</a></li>
+          <li><a href="cursor.html">Custom Cursor</a></li>
+          <li><a href="breath.html">Breath animation</a></li>
+          <li><a href="gradient.html">[SVG]Gradient animation</a></li>
 
-</body>
+          <li><a href="gsap-1.html">[gsap]Падающие квадраты</a></li>
+          <li>
+            <a href="gsap-2-3.html">[gsap]Плавность + Изменение св-в объекта</a>
+          </li>
+          <li><a href="gsap-4.html">[gsap]Анимация заголовка</a></li>
+        </ol>
+      </div>
 
+      <div class="clock">
+        <div class="bg">
+          <span class="number" style="--i: 0"><span>12</span></span>
+          <span class="number" style="--i: 15"><span>1</span></span>
+          <span class="number" style="--i: 30"><span>2</span></span>
+          <span class="number" style="--i: 45"><span>3</span></span>
+          <span class="number" style="--i: 60"><span>4</span></span>
+          <span class="number" style="--i: 75"><span>5</span></span>
+          <span class="number" style="--i: 90"><span>6</span></span>
+          <span class="number" style="--i: 105"><span>7</span></span>
+          <span class="number" style="--i: 120"><span>8</span></span>
+          <span class="number" style="--i: 135"><span>9</span></span>
+          <span class="number" style="--i: 150"><span>10</span></span>
+          <span class="number" style="--i: 165"><span>11</span></span>
+        </div>
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/clock.js"></script>
+  </body>
 </html>
