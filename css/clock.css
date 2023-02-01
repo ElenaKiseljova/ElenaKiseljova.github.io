@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: center;
 
-  width: calc(250 / 1500 * 100vw);
-  height: calc(250 / 1500 * 100vw);
+  width: clamp(125px, calc(250 / 1500 * 100vw), 250px);
+  height: clamp(125px, calc(250 / 1500 * 100vw), 250px);
 
   border-radius: 50%;
 
@@ -43,18 +43,18 @@
 }
 
 .clock .hour .hr {
-  width: calc(160 / 1500 * 100vw);
-  height: calc(160 / 1500 * 100vw);
+  width: clamp(80px, calc(160 / 1500 * 100vw), 160px);
+  height: clamp(80px, calc(160 / 1500 * 100vw), 160px);
 }
 
 .clock .min .mn {
-  width: calc(190 / 1500 * 100vw);
-  height: calc(190 / 1500 * 100vw);
+  width: clamp(95px, calc(190 / 1500 * 100vw), 190px);
+  height: clamp(95px, calc(190 / 1500 * 100vw), 190px);
 }
 
 .clock .sec .sc {
-  width: calc(230 / 1500 * 100vw);
-  height: calc(230 / 1500 * 100vw);
+  width: clamp(115px, calc(230 / 1500 * 100vw), 230px);
+  height: clamp(115px, calc(230 / 1500 * 100vw), 230px);
 }
 
 .hr,

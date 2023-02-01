@@ -155,3 +155,9 @@ body {
   border-left: 1px solid var(--green);
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    padding: 2.5rem 0 2.5rem 1rem;
+  }
+}
+
