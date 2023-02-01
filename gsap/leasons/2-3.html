@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Object properties</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+    <style>
+      ul {
+        padding: 2em;
+
+        color: black;
+
+        list-style: circle;
+      }
+
+      ul li {
+        padding: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Анимация заголовка</h1>
+
+    <ul>
+      <li id="subscriber">600</li>
+      <li id="sponsors">3</li>
+      <li id="delta">0.5</li>
+    </ul>
+
+    <pre></pre>
+
+    <script>
+      const updateObj = (selector, obj) => {
+        const el = document.querySelector(selector);
+
+        el.innerHTML = JSON.stringify(
+          {
+            subscriber: obj.subscriber,
+            sponsors: obj.sponsors,
+            delta: obj.delta,
+            color: obj.color,
+          },
+          null,
+          ' '
+        );
+      };
+
+      const updateList = (obj) => {
+        const list = document.querySelector('ul');
+        const subscriber = document.querySelector('#subscriber');
+        const sponsors = document.querySelector('#sponsors');
+        const delta = document.querySelector('#delta');
+
+        list.style.backgroundColor = obj.color;
+        list.style.color = obj.textColor;
+
+        subscriber.innerHTML = parseInt(obj.subscriber);
+        sponsors.innerHTML = parseInt(obj.sponsors);
+        delta.innerHTML = obj.delta;
+      };
+
+      const someObj = {
+        subscriber: 6000,
+        sponsors: 3,
+        delta: 0.5,
+        color: 'white',
+        textColor: 'black',
+      };
+
+      gsap.to(someObj, {
+        subscriber: 100000,
+        sponsors: 300,
+        delta: 0.5,
+        color: 'red',
+        textColor: 'white',
+        duration: 3,
+        ease: Power1.easeIn,
+        delay: 2,
+        onUpdate: function () {
+          // updateObj('pre', someObj);
+          updateList(someObj);
+        },
+      });
+    </script>
+  </body>
+</html>
+

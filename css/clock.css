@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: center;
 
-  width: calc(400 / 1500 * 100vw);
-  height: calc(400 / 1500 * 100vw);
+  width: calc(250 / 1500 * 100vw);
+  height: calc(250 / 1500 * 100vw);
 
   border-radius: 50%;
 
