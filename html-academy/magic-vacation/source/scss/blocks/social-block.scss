@@ -18,6 +18,8 @@
   color: $c-dark;
   border-radius: 50%;
 
+  transition: color 0.3s linear;
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
   }
@@ -35,6 +37,8 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+
+    transition: width 0.3s linear, height 0.3s linear;
   }
 
   svg {
@@ -127,24 +131,31 @@
     }
   }
 
-  &:hover {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  &:focus-within {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
+  &:hover,
+  &:focus-within,
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+
+    @for $i from 1 through 4 {
+      li:nth-child(#{$i}) {
+        opacity: 1;
+
+        transform: translateY(0);
+
+        transition: opacity 0.5s calc(250ms * #{$i}) linear,
+          transform 0.3s calc(250ms * #{$i}) linear;
+      }
+    }
   }
 
   li {
     flex: none;
     margin-bottom: 0.5rem;
+
+    opacity: 0;
+
+    transform: translateY(10px);
 
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
@@ -168,6 +179,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+
+  transition: color 0.3s linear;
 
   @media (min-width: $stop-scaling) {
     width: 40px;

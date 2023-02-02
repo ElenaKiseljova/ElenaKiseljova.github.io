@@ -6,6 +6,8 @@
   .swiper-wrapper {
     min-height: 100vh;
 
+    transition: none;
+
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(var(--vh, 1vh) * 100);
     }
@@ -95,6 +97,21 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+
+  opacity: 0;
+
+  transform: translateX(30px);
+
+  transition: opacity 0.3s linear, transform 0.3s ease-out;
+
+  .slider__item.swiper-slide-active &,
+  .slider__item.swiper-slide-next & {
+    opacity: 1;
+
+    transform: translateX(0);
+
+    transition: opacity 0.3s linear, transform 0.3s ease-out;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
