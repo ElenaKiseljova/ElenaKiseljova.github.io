@@ -8,6 +8,8 @@
   z-index: 1;
   overflow: hidden;
 
+  transition: background 0.3s linear;
+
   &--hidden {
     z-index: -1;
   }
