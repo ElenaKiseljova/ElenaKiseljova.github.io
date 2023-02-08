@@ -952,6 +952,29 @@ img {
     transform: scaleX(1);
     transform-origin: right; } }
 
+@keyframes title {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.js-animation-title-line {
+  display: flex;
+  margin-top: -50px;
+  padding-top: 50px;
+  overflow: hidden; }
+  .js-animation-title-line span {
+    margin-top: -50px;
+    padding-top: 50px; }
+    body.load .screen.active .js-animation-title-line span {
+      animation-name: title;
+      animation-duration: 0.3s;
+      animation-timing-function: cubic-bezier(0.23, 0.37, 0.2, 0.54);
+      animation-delay: var(--delay, 0.9s);
+      animation-fill-mode: both; }
+
 .animation-screen {
   position: fixed;
   display: flex;
