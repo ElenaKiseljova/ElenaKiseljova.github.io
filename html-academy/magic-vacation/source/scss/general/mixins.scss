@@ -59,3 +59,19 @@
 
   translate: -50% -50%;
 }
+
+@mixin animation_text($delay: 0.3s, $translateY: 30px) {
+  opacity: 0;
+
+  transform: translateY($translateY);
+
+  transition: opacity 0.3s $delay ease-in, transform 0.3s $delay linear;
+
+  contain: paint;
+
+  body.load .screen.active & {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}

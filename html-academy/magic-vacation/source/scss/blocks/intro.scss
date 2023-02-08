@@ -94,17 +94,7 @@
   font-size: 2.4rem;
   line-height: 1.27;
 
-  opacity: 0;
-
-  transform: translateY(30px);
-
-  body.load .screen.active & {
-    opacity: 1;
-
-    transform: translateY(0);
-
-    transition: opacity 0.3s 1s linear, transform 0.3s 1s ease-out;
-  }
+  @include animation_text(1s);
 
   @media (min-width: $stop-scaling) {
     width: 509px;
