@@ -40,6 +40,8 @@
   left: 0;
   right: 0;
   z-index: 1;
+
+  @include animation_text(0.3s, 100%);
 }
 
 .screen__footer {
@@ -51,17 +53,7 @@
   background-color: $c-light;
   z-index: 1;
 
-  opacity: 0;
-
-  transform: translateY(100%);
-
-  transition: opacity 0.3s 0.3s ease-in, transform 0.3s 0.3s linear;
-
-  body.load .screen.active & {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
+  @include animation_text(0.3s, 100%);
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;

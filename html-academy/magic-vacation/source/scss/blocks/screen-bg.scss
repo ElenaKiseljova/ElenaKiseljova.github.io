@@ -9,7 +9,10 @@
   width: 100%;
   height: 100%;
 
-  &[data-hash="prizes"] {
+  pointer-events: none;
+
+  &[data-hash="prizes"],
+  &[data-hash="rules"] {
     background-color: $c-dark;
 
     transform: translateY(100%);

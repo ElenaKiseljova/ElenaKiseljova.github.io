@@ -1,0 +1,49 @@
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes translateX {
+  from {
+    transform: translateX(30px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleXR {
+  from {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
