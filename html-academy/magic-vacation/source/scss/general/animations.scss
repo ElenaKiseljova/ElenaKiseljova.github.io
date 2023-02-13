@@ -75,7 +75,7 @@
     body.load .screen.active & {
       animation-name: title;
       animation-duration: 0.3s;
-      animation-timing-function: cubic-bezier(0.23, 0.37, 0.2, 0.54);
+      animation-timing-function: cubic-bezier(0, 0.27, 0, 0.51);
       animation-delay: var(--delay, 0.9s);
       animation-fill-mode: both;
     }
