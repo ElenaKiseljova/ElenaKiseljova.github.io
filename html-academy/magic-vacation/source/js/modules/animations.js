@@ -3,6 +3,7 @@ class AnimateTitle {
     if (Array.isArray(selectors) && selectors.length) {
       this._selectors = selectors;
       this._titleEls = document.querySelectorAll(this._selectors.join(`,`));
+      this.indexOfGroup = 0;
     }
 
     if (Array.isArray(delay) && delay.length) {
@@ -23,24 +24,35 @@ class AnimateTitle {
     }
   }
 
+  drawLetter(i, l, index) {
+    const template = `<span style="--delay: ${
+      (typeof this._delay[i] !== `undefined` ? this._delay[i] : 0.9) +
+      (this.indexOfGroup === 1
+        ? index + 1
+        : this.indexOfGroup === 2
+        ? index - 1
+        : index) /
+        10
+    }s;">${l}</span>`;
+
+    if (this.indexOfGroup < 2) {
+      if (l !== ` `) {
+        this.indexOfGroup++;
+      }
+    } else {
+      this.indexOfGroup = 0;
+    }
+
+    return template;
+  }
+
   async fillingTitleWrappedLetters(title, i) {
     // Разделение на слова
     const lettersHTML = title.innerHTML
       .trim()
       .split(``)
       .filter((l) => l !== ``)
-      .map(
-        (l, index) =>
-          `<span style="--delay: ${
-            (typeof this._delay[i] !== `undefined` ? this._delay[i] : 0.9) +
-            (index % 2 === 0 && index !== 0
-              ? index + 2
-              : index % 3 === 0
-              ? index - 2
-              : index) /
-              10
-          }s;">${l}</span>`
-      )
+      .map((l, index) => this.drawLetter(i, l, index))
       .join(``);
 
     // Заполнение буквами
