@@ -975,6 +975,22 @@ img {
       animation-delay: var(--delay, 0.9s);
       animation-fill-mode: both; }
 
+@keyframes rollXR {
+  from {
+    opacity: 0;
+    transform: translateX(100%) rotate(360deg); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0); } }
+
+@keyframes rollXL {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-360deg); }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0); } }
+
 .animation-screen {
   position: fixed;
   display: flex;
@@ -3139,6 +3155,15 @@ img {
   color: #5f458c; }
   .slider__control:focus {
     outline: none; }
+  body.load .screen.active .slider__control {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.17);
+    animation-delay: 0.9s;
+    animation-fill-mode: both; }
+    body.load .screen.active .slider__control--prev {
+      animation-name: rollXL; }
+    body.load .screen.active .slider__control--next {
+      animation-name: rollXR; }
   @media (min-width: 2000px) {
     .slider__control {
       width: 40px;
@@ -3200,7 +3225,11 @@ img {
   font-family: "Radical", "Arial", sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 4rem; }
+  line-height: 4rem;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease; }
+  body.load .screen.active .slider__pagination.swiper-pagination {
+    opacity: 1; }
   @media (min-width: 2000px) {
     .slider__pagination.swiper-pagination {
       bottom: 28px;
