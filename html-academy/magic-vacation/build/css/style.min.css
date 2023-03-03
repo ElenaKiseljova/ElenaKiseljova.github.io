@@ -2031,6 +2031,17 @@ img {
   .prizes__lead p {
     margin: 0; }
 
+.prizes__anim {
+  position: relative; }
+
+.prizes__airship {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 40%;
+  height: auto;
+  translate: -50% -50%; }
+
 .prizes__list {
   padding: 0;
   margin: 0;
@@ -2038,11 +2049,7 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: auto;
-  opacity: 0;
-  transition: opacity 0.3s 0.8s ease-in; }
-  body.load .screen.active .prizes__list {
-    opacity: 1; }
+  margin-top: auto; }
   @media (max-width: 1024px) and (orientation: portrait) {
     .prizes__list {
       flex-direction: column;

@@ -1,8 +1,10 @@
+// Анимация заголовков
+
 class AnimateTitle {
   constructor({ selectors, delay }) {
     if (Array.isArray(selectors) && selectors.length) {
       this._selectors = selectors;
-      this._titleEls = document.querySelectorAll(this._selectors.join(`,`));
+      this._titleEls = document.querySelectorAll(selectors.join(`,`));
       this.indexOfGroup = 0;
     }
 
@@ -11,7 +13,7 @@ class AnimateTitle {
     }
   }
 
-  async render() {
+  async init() {
     if (this._titleEls && this._titleEls.length) {
       for (const [i, title] of this._titleEls.entries()) {
         title.classList.add(`js-animation-title`);
@@ -107,11 +109,45 @@ const animateTitles = new AnimateTitle({
   delay: [0.9, 3, 0, 0.3, 0.3, 0],
 });
 
+// Анимация SVG
+
+class AnimateSVG {
+  constructor(selector) {
+    if (selector) {
+      this._el = document.querySelector(selector);
+      this._isStarted = false;
+
+      this.onUrlHashChangedHandler = this.onStartAnimation.bind(this);
+    }
+  }
+
+  init() {
+    this.onStartAnimation();
+
+    window.addEventListener(`popstate`, this.onUrlHashChangedHandler);
+  }
+
+  onStartAnimation(evt) {
+    if (
+      ((evt instanceof PopStateEvent &&
+        evt.target.location.hash === `#prizes`) ||
+        window.location.hash === `#prizes`) &&
+      this._el
+    ) {
+      this._el.beginElement();
+    }
+  }
+}
+
+const prizesAnimate = new AnimateSVG(`#primaryAwardFromShow`);
+
+// Инициализация анимаций
 export default () => {
   const mediaQuery = window.matchMedia(`(prefers-reduced-motion: reduce)`);
 
   if (!mediaQuery.matches) {
-    animateTitles.render();
+    animateTitles.init();
+    prizesAnimate.init();
   }
 
   mediaQuery.addEventListener(`change`, () => {
