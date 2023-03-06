@@ -125,13 +125,19 @@ class AnimateSVG {
     this.onStartAnimation();
 
     window.addEventListener(`popstate`, this.onUrlHashChangedHandler);
+
+    document.body.addEventListener(
+      `screenChanged`,
+      this.onUrlHashChangedHandler
+    );
   }
 
   onStartAnimation(evt) {
     if (
       ((evt instanceof PopStateEvent &&
         evt.target.location.hash === `#prizes`) ||
-        window.location.hash === `#prizes`) &&
+        window.location.hash === `#prizes` ||
+        (evt && evt.detail && evt.detail.screenName === `prizes`)) &&
       this._el
     ) {
       this._el.beginElement();
