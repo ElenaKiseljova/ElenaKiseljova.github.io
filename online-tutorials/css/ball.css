@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #04207e;
+}
+
+div {
+  position: relative;
+
+  font-family: sans-serif;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background-color: red;
+}
+
+.ball {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 2rem;
+}
+
