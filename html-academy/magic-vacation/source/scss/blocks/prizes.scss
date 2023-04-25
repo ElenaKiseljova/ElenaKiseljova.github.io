@@ -98,20 +98,28 @@
   }
 }
 
+.prizes__anim {
+  position: relative;
+}
+
+.prizes__airship {
+  position: absolute;
+
+  top: 30%;
+  left: 60%;
+
+  width: 40%;
+  height: auto;
+
+  translate: -50% -50%;
+}
+
 .prizes__list {
   @include list-reset;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: auto;
-
-  opacity: 0;
-
-  transition: opacity 0.3s 0.8s ease-in;
-
-  body.load .screen.active & {
-    opacity: 1;
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
