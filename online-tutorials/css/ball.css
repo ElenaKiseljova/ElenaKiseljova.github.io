@@ -6,13 +6,17 @@
 }
 
 body {
+  position: relative;
+
   min-height: 100vh;
 
   background: #04207e;
+
+  overflow: hidden;
 }
 
 div {
-  position: relative;
+  position: absolute;
 
   font-family: sans-serif;
 
@@ -34,3 +38,10 @@ div {
   padding: 2rem;
 }
 
+.ball--green {
+  background-color: green;
+}
+
+.ball--orange {
+  background-color: orange;
+}
