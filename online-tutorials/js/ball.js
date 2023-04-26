@@ -1,5 +1,5 @@
 class Ball {
-  constructor({ ball, container, ani, move } = {}) {
+  constructor({ ball, container } = {}) {
     this.ball = ball;
     this.container = container ?? document.body;
 
@@ -13,8 +13,9 @@ class Ball {
     this.dy = ball?.dataset?.dy ? Number(ball.dataset.dy) : 1;
 
     this.speed = ball?.dataset?.speed ? Number(ball.dataset.speed) : 3;
-    this.ani = ani ?? {};
-    this.move = move ?? false;
+
+    this.ani = {};
+    this.move = false;
 
     this.onMoverHandler = this.mover.bind(this);
     this.onMouseEnterHandler = this.mouseEnterHandler.bind(this);
