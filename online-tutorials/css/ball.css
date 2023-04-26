@@ -22,7 +22,11 @@ div {
 
   border-radius: 50%;
 
+  text-align: center;
+
   color: white;
+
+  white-space: nowrap;
 
   background-color: red;
 }

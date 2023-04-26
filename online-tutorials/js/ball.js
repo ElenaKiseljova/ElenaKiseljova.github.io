@@ -1,120 +1,106 @@
-// class Ball {
-//   constructor({
+class Ball {
+  constructor({ ball, container, ani, move } = {}) {
+    this.ball = ball;
+    this.container = container ?? document.body;
 
-//   }) {
+    this.x = ball?.dataset?.x ? Number(ball.dataset.x) : 50;
+    this.y = ball?.dataset?.y ? Number(ball.dataset.y) : 30;
 
-//   }
-// }
+    this.w = ball?.offsetWidth ?? 40;
+    this.h = ball?.offsetWidth ?? 40;
 
-const createBall = () => {
-  const body = document.body;
-  const ball = document.createElement('div');
+    this.dx = ball?.dataset?.dx ? Number(ball.dataset.dx) : 1;
+    this.dy = ball?.dataset?.dy ? Number(ball.dataset.dy) : 1;
 
-  const b = {
-    x: 50,
-    y: 30,
-    w: 40,
-    h: 40,
-    dx: 1,
-    dy: 1,
-    speed: 2,
-    ani: {},
-    move: false,
-  };
+    this.speed = ball?.dataset?.speed ? Number(ball.dataset.speed) : 3;
+    this.ani = ani ?? {};
+    this.move = move ?? false;
 
-  const mover = () => {
-    if (b.x > body.offsetWidth - b.w || b.x < 0) {
-      b.dx *= -1;
+    this.onMoverHandler = this.mover.bind(this);
+    this.onMouseEnterHandler = this.mouseEnterHandler.bind(this);
+    this.onMouseLeaveHandler = this.mouseLeaveHandler.bind(this);
+  }
+
+  mover() {
+    if (this.x > this.container.offsetWidth - this.w || this.x < 0) {
+      this.dx *= -1;
     }
 
-    if (b.y > body.offsetHeight - b.h || b.y < 0) {
-      b.dy *= -1;
+    if (this.y > this.container.offsetHeight - this.h || this.y < 0) {
+      this.dy *= -1;
     }
 
-    b.x += b.dx * b.speed;
-    b.y += b.dy * b.speed;
+    this.x += this.dx * this.speed;
+    this.y += this.dy * this.speed;
 
-    ball.style.left = `${b.x}px`;
-    ball.style.top = `${b.y}px`;
+    this.ball.style.left = `${this.x}px`;
+    this.ball.style.top = `${this.y}px`;
 
-    if (b.move) {
-      b.ani = requestAnimationFrame(mover);
+    if (this.move) {
+      this.ani = requestAnimationFrame(this.onMoverHandler);
     }
-  };
+  }
 
-  ball.style.width = `${b.w}px`;
-  ball.style.height = `${b.h}px`;
+  init() {
+    // console.log('init');
 
-  ball.style.left = `${b.x}px`;
-  ball.style.top = `${b.y}px`;
+    if (!this.ball) {
+      this.ball = document.createElement('div');
 
-  body.appendChild(ball);
-
-  ball.addEventListener('click', () => {
-    if (!b.move) {
-      b.ani = requestAnimationFrame(mover);
-      b.move = true;
-    } else {
-      cancelAnimationFrame(b.ani);
-      b.move = false;
+      this.container.appendChild(this.ball);
     }
+
+    this.ball.style.width = `${this.w}px`;
+    this.ball.style.height = `${this.h}px`;
+
+    this.ball.style.left = `${this.x}px`;
+    this.ball.style.top = `${this.y}px`;
+
+    this.ball.addEventListener('mouseenter', this.onMouseEnterHandler);
+
+    this.ball.addEventListener('mouseleave', this.onMouseLeaveHandler);
+
+    return this;
+  }
+
+  runAnim() {
+    // console.log('runAnim');
+
+    if (!this.move) {
+      this.ani = requestAnimationFrame(this.onMoverHandler);
+      this.move = true;
+    }
+  }
+
+  mouseEnterHandler() {
+    // console.log('mouseEnterHandler', this.speed);
+
+    if (this.move) {
+      cancelAnimationFrame(this.ani);
+      this.move = false;
+    }
+  }
+
+  mouseLeaveHandler() {
+    // console.log('mouseLeaveHandler', this.speed);
+
+    if (!this.move) {
+      this.ani = requestAnimationFrame(this.onMoverHandler);
+      this.move = true;
+    }
+  }
+}
+
+const ball1 = new Ball();
+ball1.init().runAnim();
+
+const body = document.body;
+const balls = body.querySelectorAll('.ball');
+
+balls.forEach((ball) => {
+  const ballItem = new Ball({
+    ball,
   });
-};
 
-// createBall();
-
-const initBall = () => {
-  const body = document.body;
-  const balls = body.querySelectorAll('.ball');
-
-  balls.forEach((ball) => {
-    const b = {
-      x: 50,
-      y: 30,
-      w: ball.offsetWidth,
-      h: ball.offsetWidth,
-      dx: 1,
-      dy: 1,
-      speed: 2,
-      ani: {},
-      move: false,
-    };
-
-    const mover = () => {
-      if (b.x > body.offsetWidth - b.w || b.x < 0) {
-        b.dx *= -1;
-      }
-
-      if (b.y > body.offsetHeight - b.h || b.y < 0) {
-        b.dy *= -1;
-      }
-
-      b.x += b.dx * b.speed;
-      b.y += b.dy * b.speed;
-
-      ball.style.left = `${b.x}px`;
-      ball.style.top = `${b.y}px`;
-
-      if (b.move) {
-        b.ani = requestAnimationFrame(mover);
-      }
-    };
-
-    ball.style.height = `${b.h}px`;
-
-    ball.style.left = `${b.x}px`;
-    ball.style.top = `${b.y}px`;
-
-    ball.addEventListener('click', () => {
-      if (!b.move) {
-        b.ani = requestAnimationFrame(mover);
-        b.move = true;
-      } else {
-        cancelAnimationFrame(b.ani);
-        b.move = false;
-      }
-    });
-  });
-};
-
-initBall();
+  ballItem.init().runAnim();
+});
