@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+
+  min-height: 100vh;
+
+  background: #fdfaf3;
+
+  overflow: hidden;
+}
+
+div {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+
+  color: aquamarine;
+}
+
+#noise {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+

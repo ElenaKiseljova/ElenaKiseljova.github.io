@@ -74,11 +74,13 @@ class Ball {
   }
 
   mouseEnterHandler() {
-    // console.log('mouseEnterHandler', this.speed);
-
     if (this.move) {
+      console.log('start mouseEnterHandler', this.ani);
+
       cancelAnimationFrame(this.ani);
       this.move = false;
+
+      console.log('end mouseEnterHandler', this.ani);
     }
   }
 
