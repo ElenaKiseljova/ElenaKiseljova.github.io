@@ -5,7 +5,9 @@ class Marquee {
     classElement,
     classElements,
     spacer,
-    duration, // ms
+    duration,
+    direction, // 'normal' | 'reverse' | 'alternate' | 'alternate-reverse'
+    playState, // 'running' | 'paused'
     onMouseEnterClass,
     onMouseLeaveClass,
     onMouseEnterHandler,
@@ -26,25 +28,27 @@ class Marquee {
     }
 
     this.spacer = spacer ?? ' ';
-    this.duration = `${duration ?? 10000}ms`;
+    this.duration = duration ?? '10000ms';
+    this.direction = direction ?? 'normal';
+    this.playState = playState ?? 'running';
 
     this.onMouseEnterClass = onMouseEnterClass ?? 'marquee--paused';
     this.onMouseLeaveClass = onMouseLeaveClass ?? 'marquee--running';
 
-    this.mouseCustomEnterHandler = onMouseEnterHandler ?? (() => {});
-    this.mouseCustomLeaveHandler = onMouseLeaveHandler ?? (() => {});
+    this.mouseCustomEnterHandler = onMouseEnterHandler ?? (() => null);
+    this.mouseCustomLeaveHandler = onMouseLeaveHandler ?? (() => null);
 
     this.mouseEnterHandler = this.mouseEnter.bind(this);
     this.mouseLeaveHandler = this.mouseLeave.bind(this);
   }
 
-  async init() {
+  init() {
     if (this.els) {
       for (const [_, el] of Object.entries(this.els)) {
-        await this.setParams(el, this.defaultContent[i]);
+        this.setParams(el);
       }
     } else if (this.el) {
-      await this.setParams(this.el);
+      this.setParams(this.el);
     }
   }
 
@@ -58,8 +62,12 @@ class Marquee {
     }
   }
 
-  async setParams(el) {
-    await this.createClones(el, await this.createSlide(el));
+  setParams(el) {
+    this.createClones(el, this.createSlide(el));
+
+    el.style.setProperty('--duration', this.duration);
+    el.style.setProperty('--direction', this.direction);
+    el.style.setProperty('--playState', this.playState);
 
     el.addEventListener('mouseenter', this.mouseEnterHandler);
     el.addEventListener('mouseleave', this.mouseLeaveHandler);
@@ -72,11 +80,10 @@ class Marquee {
     el.removeEventListener('mouseleave', this.mouseLeaveHandler);
   }
 
-  async createSlide(el) {
+  createSlide(el) {
     const slide = document.createElement('div');
     const content = el.innerHTML;
 
-    slide.style.setProperty('--duration', this.duration);
     slide.innerHTML = `${content}${this.spacer}`;
 
     el.innerHTML = '';
@@ -92,7 +99,7 @@ class Marquee {
     return slide;
   }
 
-  async createClones(el, slide) {
+  createClones(el, slide) {
     const slideClone1 = slide.cloneNode(true);
     const slideClone2 = slide.cloneNode(true);
 
@@ -107,7 +114,7 @@ class Marquee {
     this.mouseCustomEnterHandler();
   }
 
-  async mouseLeave(evt) {
+  mouseLeave(evt) {
     evt.currentTarget.classList.remove(this.onMouseEnterClass);
     evt.currentTarget.classList.add(this.onMouseLeaveClass);
 
@@ -120,7 +127,8 @@ const marqueeElement = document.querySelector('.marquee--dinamic');
 const marqueeInstance = new Marquee({
   element: marqueeElement,
   spacer: ' &mdash; ',
-  duration: 30000,
+  duration: '30000ms',
+  direction: 'alternate',
   onMouseEnterHandler: () => console.log('hello'),
   onMouseLeaveHandler: () => console.log('bye'),
 });

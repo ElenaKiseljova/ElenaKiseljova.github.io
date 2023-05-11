@@ -4,7 +4,9 @@ class CircleText {
     textEls,
     textClass,
     textClasses,
-    duration, // ms
+    duration,
+    direction, // 'normal' | 'reverse' | 'alternate' | 'alternate-reverse'
+    playState, // 'running' | 'paused'
     onMouseEnterClass,
     onMouseLeaveClass,
     onMouseEnterHandler,
@@ -22,7 +24,9 @@ class CircleText {
       this.defaultText = this.textEl.textContent;
     }
 
-    this.duration = `${duration ?? 20000}ms`;
+    this.duration = duration ?? '20000ms';
+    this.direction = direction ?? 'normal';
+    this.playState = playState ?? 'running';
 
     this.onMouseEnterClass = onMouseEnterClass ?? 'text--paused';
     this.onMouseLeaveClass = onMouseLeaveClass ?? 'text--running';
@@ -56,6 +60,8 @@ class CircleText {
 
   setParams(el) {
     el.style.setProperty('--duration', this.duration);
+    el.style.setProperty('--playState', this.playState);
+    el.style.setProperty('--direction', this.direction);
 
     this.createCircle(el);
 
@@ -102,6 +108,9 @@ class CircleText {
   }
 }
 
-const circleTextInstance = new CircleText({ textClass: '.text' });
+const circleTextInstance = new CircleText({
+  textClass: '.text',
+  direction: 'reverse',
+});
 circleTextInstance.init();
 

@@ -74,7 +74,8 @@ h2 {
 
   pointer-events: none;
 
-  animation: marquee var(--duration, 10s) linear infinite;
+  animation: marquee var(--duration, 10s) linear infinite
+    var(--direction, normal) var(--playState, running);
 }
 
 .marquee--paused div {
