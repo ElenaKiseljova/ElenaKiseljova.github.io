@@ -16,7 +16,7 @@ class CircleText {
       this.textEls = textEls ?? document.querySelectorAll(textClasses);
       this.defaultText = [];
 
-      this.textEls.forEach((el, i) => {
+      this.textEls.forEach((el) => {
         this.defaultText.push(el.textContent);
       });
     } else if (textEl || textClass) {
@@ -31,14 +31,14 @@ class CircleText {
     this.onMouseEnterClass = onMouseEnterClass ?? 'text--paused';
     this.onMouseLeaveClass = onMouseLeaveClass ?? 'text--running';
 
-    this.mouseCustomEnterHandler = onMouseEnterHandler ?? (() => {});
-    this.mouseCustomLeaveHandler = onMouseLeaveHandler ?? (() => {});
+    this.mouseCustomEnterHandler = onMouseEnterHandler ?? (() => null);
+    this.mouseCustomLeaveHandler = onMouseLeaveHandler ?? (() => null);
 
     this.mouseEnterHandler = this.mouseEnter.bind(this);
     this.mouseLeaveHandler = this.mouseLeave.bind(this);
   }
 
-  async init() {
+  init() {
     if (this.textEls) {
       for (const [_, el] of Object.entries(this.textEls)) {
         this.setParams(el);
@@ -54,7 +54,7 @@ class CircleText {
         this.resetParams(el, this.defaultText[i]);
       }
     } else if (this.textEl && !Array.isArray(this.defaultText)) {
-      this.resetParams(el, this.defaultText);
+      this.resetParams(this.textEl, this.defaultText);
     }
   }
 
@@ -100,7 +100,7 @@ class CircleText {
     this.mouseCustomEnterHandler();
   }
 
-  async mouseLeave(evt) {
+  mouseLeave(evt) {
     evt.currentTarget.classList.remove(this.onMouseEnterClass);
     evt.currentTarget.classList.add(this.onMouseLeaveClass);
 
