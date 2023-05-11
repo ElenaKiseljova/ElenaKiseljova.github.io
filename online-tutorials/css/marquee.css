@@ -47,8 +47,8 @@ h2 {
   width: 33.33vw;
 }
 
-.marquee--flex {
-  width: 50vw;
+.marquee--dinamic {
+  width: 100vw;
 }
 
 .marquee div {
@@ -74,7 +74,7 @@ h2 {
 
   pointer-events: none;
 
-  animation: marquee 10s linear infinite;
+  animation: marquee var(--duration, 10s) linear infinite;
 }
 
 .marquee--paused div {

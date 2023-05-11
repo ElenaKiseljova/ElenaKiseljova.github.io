@@ -1,24 +1,33 @@
 class Marquee {
   constructor({
+    element,
+    elements,
+    classElement,
     classElements,
     spacer,
+    duration, // ms
     onMouseEnterClass,
     onMouseLeaveClass,
     onMouseEnterHandler,
     onMouseLeaveHandler,
   }) {
-    this.els = document.querySelectorAll(classElements);
+    if (classElements || elements) {
+      this.els = elements ?? document.querySelectorAll(classElements);
 
-    this.defaultContent = [];
+      this.defaultContent = [];
 
-    this.els.forEach((el, i) => {
-      this.defaultContent.push({
-        innerHtml: el.innerHTML,
-        index: i,
+      this.els.forEach((el, i) => {
+        this.defaultContent.push(el.innerHTML);
       });
-    });
+    } else if (classElement || element) {
+      this.el = element ?? document.querySelector(classElement);
+
+      this.defaultContent = this.el.innerHTML;
+    }
 
     this.spacer = spacer ?? ' ';
+    this.duration = `${duration ?? 10000}ms`;
+
     this.onMouseEnterClass = onMouseEnterClass ?? 'marquee--paused';
     this.onMouseLeaveClass = onMouseLeaveClass ?? 'marquee--running';
 
@@ -30,27 +39,44 @@ class Marquee {
   }
 
   async init() {
-    for (const [_, el] of Object.entries(this.els)) {
-      await this.createClones(el, await this.createSlide(el));
-
-      el.addEventListener('mouseenter', this.mouseEnterHandler);
-      el.addEventListener('mouseleave', this.mouseLeaveHandler);
+    if (this.els) {
+      for (const [_, el] of Object.entries(this.els)) {
+        await this.setParams(el, this.defaultContent[i]);
+      }
+    } else if (this.el) {
+      await this.setParams(this.el);
     }
   }
 
   destroy() {
-    for (const [i, el] of Object.entries(this.els)) {
-      el.innerHTML = this.defaultContent[i].innerHtml;
-
-      el.removeEventListener('mouseenter', this.mouseEnterHandler);
-      el.removeEventListener('mouseleave', this.mouseLeaveHandler);
+    if (this.els && Array.isArray(this.defaultContent)) {
+      for (const [i, el] of Object.entries(this.els)) {
+        this.resetParams(el, this.defaultContent[i]);
+      }
+    } else if (this.el && !Array.isArray(this.defaultContent)) {
+      this.resetParams(this.el, this.defaultContent);
     }
+  }
+
+  async setParams(el) {
+    await this.createClones(el, await this.createSlide(el));
+
+    el.addEventListener('mouseenter', this.mouseEnterHandler);
+    el.addEventListener('mouseleave', this.mouseLeaveHandler);
+  }
+
+  resetParams(el, defaultContent) {
+    el.innerHTML = defaultContent;
+
+    el.removeEventListener('mouseenter', this.mouseEnterHandler);
+    el.removeEventListener('mouseleave', this.mouseLeaveHandler);
   }
 
   async createSlide(el) {
     const slide = document.createElement('div');
     const content = el.innerHTML;
 
+    slide.style.setProperty('--duration', this.duration);
     slide.innerHTML = `${content}${this.spacer}`;
 
     el.innerHTML = '';
@@ -89,9 +115,12 @@ class Marquee {
   }
 }
 
+const marqueeElement = document.querySelector('.marquee--dinamic');
+
 const marqueeInstance = new Marquee({
-  classElements: '.marquee--flex',
+  element: marqueeElement,
   spacer: ' &mdash; ',
+  duration: 30000,
   onMouseEnterHandler: () => console.log('hello'),
   onMouseLeaveHandler: () => console.log('bye'),
 });

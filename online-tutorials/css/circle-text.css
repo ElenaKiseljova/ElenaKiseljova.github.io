@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background: #bc2d9f;
+}
+
+.circle,
+.logo {
+  border-radius: 50%;
+}
+
+.circle {
+  position: relative;
+
+  width: 30vw;
+  height: 30vw;
+
+  /* background-color: rgb(188, 13, 89); */
+}
+
+.logo {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: calc(100% - 80px);
+
+  background-image: url('../img/Ellipse 7.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  filter: grayscale(1) brightness(1.5);
+
+  transform: translate(-50%, -50%);
+}
+
+.logo::before {
+  display: block;
+
+  width: 100%;
+
+  padding-bottom: 100%;
+
+  content: '';
+}
+
+.text {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  color: white;
+
+  animation: rotate var(--duration, 20s) linear infinite;
+}
+
+.text--running {
+  animation-play-state: running;
+}
+
+.text--paused {
+  animation-play-state: paused;
+}
+
+.text span {
+  position: absolute;
+
+  left: 50%;
+
+  transform-origin: 0 15vw;
+
+  transform: rotateZ(calc(360deg / var(--length) * var(--index)));
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
