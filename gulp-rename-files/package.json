@@ -1,0 +1,22 @@
+{
+  "name": "rename-files-for-web",
+  "version": "1.0.0",
+  "description": "Script rename files for Web",
+  "author": "Elena Kiseljova",
+  "license": "WTFPL",
+  "scripts": {
+    "rename": "gulp renameFilesToWebFriendlyFormat",
+    "minify": "gulp minify",
+    "webp": "gulp webp"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-debug": "^4.0.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^6.0.0"
+  }
+}
