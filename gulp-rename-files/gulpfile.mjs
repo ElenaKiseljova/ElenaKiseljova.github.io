@@ -244,9 +244,23 @@ const renameFiles = (callback) => {
               (letter) => letter.cyr === l
             )?.lat;
 
+            if (cyrToLatLetter) {
+              return cyrToLatLetter;
+            }
+
             const latLetter = englishAlphabet.find((letter) => letter === l);
 
-            return latLetter || cyrToLatLetter || '_';
+            if (latLetter) {
+              return latLetter;
+            }
+
+            const number = !isNaN(l) && l.trim() !== '' ? l : false;
+
+            if (number) {
+              return number;
+            }
+
+            return '_';
           })
           .join('');
 
